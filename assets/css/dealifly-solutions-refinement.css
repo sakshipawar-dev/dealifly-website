@@ -2295,4 +2295,91 @@ a.dealifly-contact-info-value:hover {
     }
 }
 
+/* ================================================================
+   Dealifly Industry Jump Navigation & Service Grid
+   ================================================================ */
+.dealifly-industry-jump-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 2rem 0 1rem;
+}
+
+.dealifly-industry-jump-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    background: rgba(18, 16, 28, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(245, 245, 247, 0.85);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(10px);
+}
+
+.dealifly-industry-jump-pill:hover,
+.dealifly-industry-jump-pill.active {
+    background: rgba(168, 85, 247, 0.18);
+    border-color: rgba(183, 165, 245, 0.6);
+    color: #FFFFFF;
+    box-shadow: 0 0 16px rgba(168, 85, 247, 0.25);
+    transform: translateY(-1px);
+}
+
+.dealifly-industry-block {
+    padding: clamp(3.5rem, 6vw, 5.5rem) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    position: relative;
+}
+
+.dealifly-industry-block:last-of-type {
+    border-bottom: none;
+}
+
+.dealifly-industry-tag-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.35rem 0.95rem;
+    border-radius: 999px;
+    background: rgba(168, 85, 247, 0.12);
+    border: 1px solid rgba(183, 165, 245, 0.35);
+    color: #B7A5F5;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.02em;
+}
+
+.dealifly-services-16-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    width: 100%;
+}
+
+@media (max-width: 1199.98px) {
+    .dealifly-services-16-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 991.98px) {
+    .dealifly-services-16-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .dealifly-services-16-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 
