@@ -5,11 +5,11 @@
 
 /* ---------- ROOT TOKENS (industry-specific) ---------- */
 :root {
-  --ind-accent: #c084fc;
-  --ind-accent-rgb: 192, 132, 252;
-  --ind-accent-pink: #e8b4f8;
-  --ind-primary: #6328ff;
-  --ind-primary-rgb: 99, 40, 255;
+  --ind-accent: #b7a5f5;
+  --ind-accent-rgb: 183, 165, 245;
+  --ind-accent-pink: #b7a5f5;
+  --ind-primary: #7c3aed;
+  --ind-primary-rgb: 124, 58, 237;
   --ind-success: #34d399;
   --ind-success-rgb: 52, 211, 153;
   --ind-info: #38bdf8;
@@ -146,9 +146,8 @@
 }
 
 .ind-hero__title span {
-  color: #e8b4f8;
-  /* elegant soft light pink from reference screenshot */
-  background: linear-gradient(135deg, #ffffff 0%, #f5d0fe 35%, #e8b4f8 100%);
+  color: #b7a5f5;
+  background: linear-gradient(135deg, #ffffff 0%, #d8b4fe 40%, #b7a5f5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline;
@@ -547,11 +546,12 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #c084fc;
-  background: rgba(192, 132, 252, 0.08);
-  border: 1px solid rgba(192, 132, 252, 0.25);
+  color: #b7a5f5;
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(183, 165, 245, 0.35);
   border-radius: var(--ind-radius-pill);
   padding: 0.35rem 0.95rem;
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.15);
   margin-bottom: 0.85rem;
 }
 
@@ -566,9 +566,8 @@
 }
 
 .ind-section-title span {
-  color: #e8b4f8;
-  /* soft light pink */
-  background: linear-gradient(135deg, #ffffff 0%, #f5d0fe 35%, #e8b4f8 100%);
+  color: #b7a5f5;
+  background: linear-gradient(135deg, #ffffff 0%, #d8b4fe 40%, #b7a5f5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline;
@@ -684,7 +683,7 @@
 .ind-auto-card:hover .ind-auto-card__icon {
   background: rgba(168, 85, 247, 0.22);
   border-color: rgba(168, 85, 247, 0.45);
-  color: #f5d0fe;
+  color: #b7a5f5;
   transform: scale(1.06);
 }
 
@@ -1248,28 +1247,30 @@
 }
 
 .ind-growth__step-num {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: rgba(var(--ind-primary-rgb), 0.15);
-  border: 2px solid rgba(var(--ind-primary-rgb), 0.35);
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, rgba(124, 58, 237, 0.08) 100%);
+  border: 1.5px solid rgba(183, 165, 245, 0.65);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1rem;
-  font-size: 0.8rem;
+  font-size: 0.88rem;
   font-weight: 700;
-  color: var(--ind-accent);
+  color: #b7a5f5;
+  box-shadow: 0 0 16px rgba(168, 85, 247, 0.3);
   position: relative;
   z-index: 2;
   transition: all var(--ind-transition);
 }
 
 .ind-growth__step:hover .ind-growth__step-num {
-  background: rgba(var(--ind-accent-rgb), 0.2);
-  border-color: var(--ind-accent);
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.35) 0%, rgba(124, 58, 237, 0.15) 100%);
+  border-color: #b7a5f5;
+  color: #ffffff;
   transform: scale(1.15);
-  box-shadow: 0 0 20px rgba(var(--ind-accent-rgb), 0.3);
+  box-shadow: 0 0 24px rgba(183, 165, 245, 0.75), 0 0 12px rgba(168, 85, 247, 0.55);
 }
 
 .ind-growth__step-title {
@@ -1290,13 +1291,15 @@
 /* Connecting line between steps */
 .ind-growth__line {
   position: absolute;
-  top: 20px;
+  top: 22px;
   left: 12.5%;
   right: 12.5%;
   height: 2px;
   background: linear-gradient(90deg,
-      rgba(var(--ind-primary-rgb), 0.3),
-      rgba(var(--ind-accent-rgb), 0.3));
+      rgba(168, 85, 247, 0.55) 0%,
+      rgba(129, 140, 248, 0.55) 50%,
+      rgba(99, 102, 241, 0.45) 100%);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.35);
   z-index: 1;
 }
 
@@ -2715,8 +2718,8 @@
    E-COMMERCE THEME & HERO DASHBOARD STYLES
    ===================================================================== */
 .ind-ecom-theme {
-  --ind-accent: #f54ff2;
-  --ind-accent-rgb: 245, 79, 242;
+  --ind-accent: #b7a5f5;
+  --ind-accent-rgb: 183, 165, 245;
   --ind-primary: #8b5cf6;
   --ind-primary-rgb: 139, 92, 246;
   --ind-teal: #06b6d4;
@@ -2975,7 +2978,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(90deg, #6328ff 0%, #f54ff2 50%, #34d399 100%);
+  background: linear-gradient(90deg, #6328ff 0%, #a855f7 50%, #34d399 100%);
   border-radius: 999px;
   opacity: 0.5;
 }
@@ -2988,8 +2991,8 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #f54ff2;
-  box-shadow: 0 0 16px #f54ff2, 0 0 32px #6328ff;
+  background: #b7a5f5;
+  box-shadow: 0 0 16px #b7a5f5, 0 0 32px #6328ff;
   transform: translate(-50%, -50%);
   z-index: 4;
   pointer-events: none;
@@ -3129,7 +3132,7 @@
 }
 
 .ind-tree-node-circle:hover {
-  filter: drop-shadow(0 0 8px #f54ff2);
+  filter: drop-shadow(0 0 8px #a855f7);
 }
 
 .ind-tree-metric-strip {
@@ -5028,9 +5031,9 @@ a.ind-contact-info-val:hover {
 .ind-scanner-score-badge {
   font-size: 0.75rem;
   font-weight: 800;
-  color: #e8b4f8;
-  background: rgba(192, 132, 252, 0.12);
-  border: 1px solid rgba(192, 132, 252, 0.3);
+  color: #b7a5f5;
+  background: rgba(183, 165, 245, 0.12);
+  border: 1px solid rgba(183, 165, 245, 0.3);
   padding: 0.2rem 0.55rem;
   border-radius: 999px;
   letter-spacing: 0.04em;
@@ -5050,8 +5053,8 @@ a.ind-contact-info-val:hover {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #c084fc 30%, #e8b4f8 70%, transparent);
-  box-shadow: 0 0 10px #c084fc, 0 0 20px rgba(192, 132, 252, 0.6);
+  background: linear-gradient(90deg, transparent, #b7a5f5 30%, #a855f7 70%, transparent);
+  box-shadow: 0 0 10px #b7a5f5, 0 0 20px rgba(183, 165, 245, 0.6);
   animation: ind-laser-sweep 2.8s ease-in-out infinite alternate;
   z-index: 2;
   pointer-events: none;
@@ -5149,7 +5152,7 @@ a.ind-contact-info-val:hover {
 .ind-sourcing-chip.active {
   background: rgba(99, 40, 255, 0.16);
   border-color: rgba(168, 85, 247, 0.4);
-  color: #e8b4f8;
+  color: #b7a5f5;
 }
 
 .ind-sourcing-conduit-svg {
@@ -5174,7 +5177,7 @@ a.ind-contact-info-val:hover {
 
 .ind-sourcing-seq-status {
   font-size: 0.68rem;
-  color: #c084fc;
+  color: #b7a5f5;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -5183,9 +5186,9 @@ a.ind-contact-info-val:hover {
 
 .ind-sourcing-reply-pill {
   font-size: 0.7rem;
-  color: #e8b4f8;
-  background: rgba(192, 132, 252, 0.12);
-  border: 1px solid rgba(192, 132, 252, 0.25);
+  color: #b7a5f5;
+  background: rgba(183, 165, 245, 0.12);
+  border: 1px solid rgba(183, 165, 245, 0.25);
   padding: 0.25rem 0.55rem;
   border-radius: 6px;
   margin-top: 0.35rem;
@@ -5233,7 +5236,7 @@ a.ind-contact-info-val:hover {
   align-items: center;
   justify-content: center;
   font-size: 0.7rem;
-  color: #c084fc;
+  color: #b7a5f5;
 }
 
 .ind-company-title {
@@ -5250,16 +5253,16 @@ a.ind-contact-info-val:hover {
 .ind-company-signal {
   font-size: 0.68rem;
   font-weight: 700;
-  color: #e8b4f8;
-  background: rgba(192, 132, 252, 0.12);
-  border: 1px solid rgba(192, 132, 252, 0.25);
+  color: #b7a5f5;
+  background: rgba(183, 165, 245, 0.12);
+  border: 1px solid rgba(183, 165, 245, 0.25);
   padding: 0.15rem 0.5rem;
   border-radius: 999px;
 }
 
 .ind-companies-outreach-note {
   font-size: 0.7rem;
-  color: #e8b4f8;
+  color: #b7a5f5;
   display: flex;
   align-items: center;
   gap: 0.35rem;
@@ -5361,8 +5364,8 @@ a.ind-contact-info-val:hover {
 }
 
 .ind-hero--left .ind-hero__title span {
-  color: #e8b4f8;
-  background: linear-gradient(135deg, #ffffff 0%, #f5d0fe 35%, #e8b4f8 100%);
+  color: #b7a5f5;
+  background: linear-gradient(135deg, #ffffff 0%, #d8b4fe 40%, #b7a5f5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;

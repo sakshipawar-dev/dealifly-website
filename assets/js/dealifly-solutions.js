@@ -24,7 +24,7 @@
             'rgba(196, 181, 253, ', // lavender
             'rgba(167, 139, 250, ', // purple
             'rgba(143, 122, 232, ', // brand purple
-            'rgba(240, 171, 252, ', // soft pink
+            'rgba(183, 165, 245, ', // light purple
             'rgba(255, 255, 255, '  // white highlight
         ];
 
