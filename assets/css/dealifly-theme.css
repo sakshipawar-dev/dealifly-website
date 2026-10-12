@@ -1,10 +1,10 @@
 @charset "UTF-8";
-3: /*--------------------------------------------------------------------
+/*--------------------------------------------------------------------
 
 Dealifly premium visual language
 Loaded after style.css. Preserves structure; reduces saturation/glow.
 --------------------------------------------------------------------*/
-8: :root {
+:root {
 
 --bg: #050507;
 --bg-secondary: #09090d;
@@ -27,7 +27,7 @@ Loaded after style.css. Preserves structure; reduces saturation/glow.
 --radius-md: 0.875rem;
 --radius-lg: 1rem;
 --container-max: 72.5rem;
-31:     --dark-saas: #050507;
+--dark-saas: #050507;
 
 --dark-saas-rgb: 5, 5, 7;
 --h1: clamp(2.5rem, 3.4vw + 0.7rem, 4.65rem);
@@ -35,7 +35,7 @@ Loaded after style.css. Preserves structure; reduces saturation/glow.
 --h3: clamp(1.55rem, 1.7vw + 0.7rem, 2.35rem);
 --h4: clamp(1.25rem, 1.1vw + 0.7rem, 1.75rem);
 --p: clamp(0.9375rem, 0.35vw + 0.85rem, 1.0625rem);
-39:     --bs-primary: #7657d9;
+--bs-primary: #7657d9;
 
 --bs-primary-rgb: 118, 87, 217;
 --bs-secondary: #8f7ae8;
@@ -48,16 +48,25 @@ Loaded after style.css. Preserves structure; reduces saturation/glow.
 --bs-primary-bg-subtle: rgba(118, 87, 217, 0.16);
 --bs-primary-border-subtle: rgba(118, 87, 217, 0.32);
 }
-52: html {
+
+/* Eliminate duplicate dropdown chevron across entire site */
+.primary-header .has-sub-menu > .nav-link::after,
+.has-sub-menu > .nav-link::after,
+.navigation-1.has-sub-menu > .nav-link::after {
+    display: none !important;
+    content: none !important;
+}
+
+html {
 
 background-color: var(--bg);
 }
-56: body.bg-dark-saas {
+body.bg-dark-saas {
 
 background-color: var(--bg) !important;
 color: var(--text-secondary);
 }
-61: body.bg-dark-saas h1,
+body.bg-dark-saas h1,
 
 body.bg-dark-saas h2,
 body.bg-dark-saas h3,
@@ -71,33 +80,33 @@ color: var(--text-primary);
 font-weight: 600;
 letter-spacing: -0.035em;
 }
-75: body.bg-dark-saas p {
+body.bg-dark-saas p {
 
 color: var(--text-secondary);
 line-height: 1.7;
 }
-80: .container {
+.container {
 
 max-width: var(--container-max);
 }
-84: .bg-dark-saas {
+.bg-dark-saas {
 
 background-color: var(--bg) !important;
 }
-88: .dealifly-accent,
+.dealifly-accent,
 
 .hero-8 .business,
 [style*="color: #f54ff2"],
 [style*="color:#f54ff2"] {
 color: var(--pink-soft) !important;
 }
-95: .dealifly-section-kicker {
+.dealifly-section-kicker {
 
 color: var(--pink-soft) !important;
 letter-spacing: 0.14em;
 font-weight: 600;
 }
-101: /* Typography: selected highlight words stay muted brand, not neon */
+/* Typography: selected highlight words stay muted brand, not neon */
 
 .text-clip--primary,
 .text-clip--primary-alt {
@@ -106,7 +115,7 @@ background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 }
-110: /* Buttons */
+/* Buttons */
 
 .btn {
 --bs-btn-border-radius: var(--radius-sm);
@@ -114,7 +123,7 @@ font-weight: 600;
 letter-spacing: -0.01em;
 transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, box-shadow 180ms ease, color 180ms ease;
 }
-118: .btn-primary {
+.btn-primary {
 
 --bs-btn-color: #fff;
 --bs-btn-bg: #7657d9;
@@ -126,12 +135,12 @@ transition: transform 180ms ease, background 180ms ease, border-color 180ms ease
 --bs-btn-active-border-color: rgba(255, 255, 255, 0.18);
 box-shadow: none;
 }
-130: .btn-primary.rounded-pill,
+.btn-primary.rounded-pill,
 
 .navbar .btn-primary.rounded-pill {
 border-radius: 0.625rem !important;
 }
-135: .bg-gradient-linear,
+.bg-gradient-linear,
 
 .btn.bg-gradient-linear {
 background-image: var(--cta-fill) !important;
@@ -141,20 +150,20 @@ border-radius: var(--radius-sm) !important;
 box-shadow: none !important;
 color: #fff !important;
 }
-145: .btn-primary:hover,
+.btn-primary:hover,
 
 .btn.bg-gradient-linear:hover {
 transform: translateY(-1px);
 box-shadow: var(--glow-soft) !important;
 }
-151: .btn-outline-light,
+.btn-outline-light,
 
 .btn-outline-primary {
 background: transparent;
 border-color: var(--border);
 color: var(--text-primary);
 }
-158: .btn-outline-primary {
+.btn-outline-primary {
 
 --bs-btn-color: var(--text-primary);
 --bs-btn-border-color: var(--border);
@@ -162,17 +171,17 @@ color: var(--text-primary);
 --bs-btn-hover-bg: rgba(118, 87, 217, 0.18);
 --bs-btn-hover-border-color: var(--border-hover);
 }
-166: .btn-outline-light:hover,
+.btn-outline-light:hover,
 
 .btn-outline-primary:hover {
 transform: translateY(-1px);
 }
-171: .text-bg-primary {
+.text-bg-primary {
 
 background-color: var(--purple) !important;
 color: #fff !important;
 }
-176: /* Navbar */
+/* Navbar */
 
 .primary-header {
 background-color: rgba(5, 5, 7, 0.78) !important;
@@ -181,69 +190,69 @@ border-bottom: 1px solid var(--border);
 backdrop-filter: blur(18px);
 box-shadow: none !important;
 }
-185: .primary-header .container {
+.primary-header .container {
 
 padding-inline: clamp(1rem, 3vw, 1.75rem);
 }
-189: .primary-header .nav-link {
+.primary-header .nav-link {
 
 color: var(--text-primary) !important;
 font-weight: 500;
 }
-194: .primary-header .nav-link.active {
+.primary-header .nav-link.active {
 
 color: var(--purple-soft) !important;
 }
-198: .primary-header .nav-link:hover {
+.primary-header .nav-link:hover {
 
 color: var(--lavender) !important;
 }
-202: .primary-header--dark.primary-header--boxed > .container {
+.primary-header--dark.primary-header--boxed > .container {
 
 background-color: rgba(13, 13, 18, 0.92) !important;
 border: 1px solid var(--border);
 box-shadow: none;
 }
-208: .primary-header--dark .nav-link.active,
+.primary-header--dark .nav-link.active,
 
 .primary-header--transparent-light-alt .nav-link.active,
 .primary-header-crossed .primary-header--transparent-light-alt .nav-link.active {
 color: var(--purple-soft) !important;
 }
-214: .primary-header-crossed .primary-header--transparent-light-alt:not(.primary-header--boxed) {
+.primary-header-crossed .primary-header--transparent-light-alt:not(.primary-header--boxed) {
 
 background-color: rgba(5, 5, 7, 0.92) !important;
 color: var(--text-primary) !important;
 }
-219: .navigation-1__menu,
+.navigation-1__menu,
 
 .navigation-0__menu {
 background-color: var(--surface) !important;
 border: 1px solid var(--border);
 box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
 }
-226: .navigation-1__menu-link,
+.navigation-1__menu-link,
 
 .navigation-0__menu-link {
 color: var(--text-secondary) !important;
 }
-231: .navigation-1__menu-link:hover,
+.navigation-1__menu-link:hover,
 
 .navigation-0__menu-link:hover {
 background-color: var(--surface-hover) !important;
 color: var(--text-primary) !important;
 }
-237: .dealifly-nav-logo__name {
+.dealifly-nav-logo__name {
 
 color: var(--text-primary);
 }
-241: .primary-header--transparent-light-alt .navbar-collapse {
+.primary-header--transparent-light-alt .navbar-collapse {
 
 background-color: rgba(13, 13, 18, 0.98);
 border-color: var(--border);
 box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
 }
-247: @media (min-width: 992px) {
+@media (min-width: 992px) {
 
 .primary-header--transparent-light-alt .navbar-collapse {
 background-color: transparent;
@@ -251,29 +260,29 @@ border: 0;
 box-shadow: none;
 }
 }
-255: /* Hero */
+/* Hero */
 
 .hero-8 {
 background-color: var(--bg);
 }
-260: .hero-8::after {
+.hero-8::after {
 
 background:
 radial-gradient(ellipse 80% 55% at 50% -10%, rgba(118, 87, 217, 0.16), transparent 58%),
 radial-gradient(ellipse 45% 40% at 88% 18%, rgba(216, 90, 207, 0.08), transparent 55%),
 linear-gradient(180deg, rgba(5, 5, 7, 0.55) 0%, rgba(5, 5, 7, 0.18) 38%, #050507 100%);
 }
-267: .hero-8__backdrop-video {
+.hero-8__backdrop-video {
 
 filter: saturate(0.45) contrast(1.02) brightness(0.42);
 opacity: 0.42;
 }
-272: .hero-8__content {
+.hero-8__content {
 
 padding-block-start: clamp(7rem, 9vw + 1.25rem, 10rem);
 padding-block-end: clamp(2.5rem, 4vw, 4.25rem);
 }
-277: .hero-8 h1 {
+.hero-8 h1 {
 
 color: var(--text-primary);
 font-weight: 600;
@@ -281,38 +290,38 @@ letter-spacing: -0.045em;
 line-height: 1.08;
 margin-bottom: 1.75rem !important;
 }
-285: .hero-8 h1 .business {
+.hero-8 h1 .business {
 
 color: var(--lavender) !important;
 font-weight: 600;
 }
-290: .hero-8 p {
+.hero-8 p {
 
 color: var(--text-secondary) !important;
 max-width: 38rem;
 line-height: 1.75;
 }
-296: .hero-8__showcase {
+.hero-8__showcase {
 
 border: 1px solid var(--border);
 border-radius: var(--radius-lg);
 box-shadow: 0 24px 48px rgba(0, 0, 0, 0.32);
 }
-302: .hero-8__visual img {
+.hero-8__visual img {
 
 filter: saturate(0.86) contrast(1.02);
 }
-306: .hero-8 .badge {
+.hero-8 .badge {
 
 background-color: var(--purple) !important;
 box-shadow: none;
 }
-311: .hero-8 .bg-dark {
+.hero-8 .bg-dark {
 
 background-color: var(--surface) !important;
 border: 1px solid var(--border);
 }
-316: /* Cards */
+/* Cards */
 
 .feature-card-1,
 .price-card-1,
@@ -332,17 +341,17 @@ background-color: var(--surface);
 border: 1px solid var(--border);
 box-shadow: none;
 }
-336: .feature-card-1 {
+.feature-card-1 {
 
 background-image: linear-gradient(180deg, rgba(118, 87, 217, 0.08) 0%, rgba(13, 13, 18, 0.92) 72%) !important;
 border-radius: var(--radius-lg);
 }
-341: .folder-card-1 {
+.folder-card-1 {
 
 --folder-card-bg: rgba(13, 13, 18, 0.88);
 border-radius: var(--radius-lg);
 }
-346: .dealifly-case-card,
+.dealifly-case-card,
 
 .dealifly-service-route-card,
 .dealifly-content-panel,
@@ -354,7 +363,7 @@ background: var(--surface) !important;
 border-color: var(--border) !important;
 border-radius: 1rem;
 }
-358: .dealifly-case-card:hover,
+.dealifly-case-card:hover,
 
 .dealifly-service-route-card:hover,
 .dealifly-insight-card:hover,
@@ -365,55 +374,55 @@ border-color: var(--border-hover) !important;
 background-color: var(--surface-hover) !important;
 box-shadow: none;
 }
-369: .gradient-border--surface-dark-alt,
+.gradient-border--surface-dark-alt,
 
 .gradient-border--surface-dark-emphasis {
 --surface-color: var(--surface);
 --border-color-top: rgba(255, 255, 255, 0.1);
 --border-color-bottom: rgba(118, 87, 217, 0.18);
 }
-376: .gradient-border::before {
+.gradient-border::before {
 
 opacity: 0.45;
 }
-380: /* Glow reductions */
+/* Glow reductions */
 
 .preloader__brand {
 background: rgba(13, 13, 18, 0.72);
 border-color: var(--border);
 box-shadow: inset 0 0 1.5rem rgba(118, 87, 217, 0.06), 0 0 1.75rem rgba(118, 87, 217, 0.08);
 }
-387: .preloader__orbit {
+.preloader__orbit {
 
 border-color: rgba(143, 122, 232, 0.28);
 }
-391: .preloader__orbit::after {
+.preloader__orbit::after {
 
 background: var(--purple-soft);
 box-shadow: 0 0 0.45rem rgba(118, 87, 217, 0.28);
 }
-396: .pulser__content {
+.pulser__content {
 
 background-image: var(--cta-fill);
 box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12), 0 0 1.1rem rgba(118, 87, 217, 0.16);
 }
-401: .dealifly-process-section::before {
+.dealifly-process-section::before {
 
 background: rgba(118, 87, 217, 0.08);
 filter: blur(5.5rem);
 }
-406: .dealifly-process-section__panel {
+.dealifly-process-section__panel {
 
 background: var(--surface);
 border-color: var(--border);
 box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
 }
-412: .dealifly-process-section__video {
+.dealifly-process-section__video {
 
 border-color: var(--border);
 box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
 }
-417: .dealifly-route-hero {
+.dealifly-route-hero {
 
 background:
 radial-gradient(circle at 18% 12%, rgba(118, 87, 217, 0.12), transparent 26rem),
@@ -421,15 +430,15 @@ radial-gradient(circle at 86% 88%, rgba(216, 90, 207, 0.06), transparent 24rem),
 var(--bg);
 border-bottom-color: var(--border);
 }
-425: .dealifly-listing-section {
+.dealifly-listing-section {
 
 background: var(--bg);
 }
-429: .dealifly-listing-section--muted {
+.dealifly-listing-section--muted {
 
 background: var(--bg-secondary);
 }
-433: .dealifly-page {
+.dealifly-page {
 
 --dealifly-surface: var(--surface);
 --dealifly-surface-strong: var(--surface-hover);
@@ -439,53 +448,53 @@ background: var(--bg-secondary);
 --dealifly-accent-soft: var(--lavender);
 background: var(--bg);
 }
-443: .dealifly-eyebrow-pill {
+.dealifly-eyebrow-pill {
 
 background: rgba(118, 87, 217, 0.1);
 border-color: rgba(183, 165, 245, 0.22);
 color: var(--lavender);
 }
-449: .dealifly-eyebrow-pill__dot {
+.dealifly-eyebrow-pill__dot {
 
 background: var(--purple-soft);
 box-shadow: none;
 }
-454: .dealifly-service-cta {
+.dealifly-service-cta {
 
 border-color: var(--border);
 background: var(--surface);
 box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
 }
-460: .cta-6 {
+.cta-6 {
 
 background:
 radial-gradient(ellipse 70% 80% at 50% 120%, rgba(118, 87, 217, 0.18), transparent 58%),
 var(--surface) !important;
 border-color: var(--border) !important;
 }
-467: .cta-6 svg {
+.cta-6 svg {
 
 opacity: 0.28;
 }
-471: .platform-card-1 {
+.platform-card-1 {
 
 background-image: var(--brand-atmosphere), url("../img/shapes/card-bg-1.png");
 }
-475: .bg-gradient-1 {
+.bg-gradient-1 {
 
 background-image: linear-gradient(180deg, #8f7ae8 0%, #7657d9 100%) !important;
 }
-479: /* Sections & spacing */
+/* Sections & spacing */
 
 .section-space-y {
 padding-block-start: clamp(4.25rem, 7.4vw + 1rem, 8.5rem);
 padding-block-end: clamp(4.25rem, 7.4vw + 1rem, 8.5rem);
 }
-485: .section-space-top {
+.section-space-top {
 
 padding-block-start: clamp(4.25rem, 7.4vw + 1rem, 8.5rem);
 }
-489: .dealifly-specialized-services,
+.dealifly-specialized-services,
 
 .dealifly-planning-section,
 .dealifly-process-section,
@@ -494,24 +503,24 @@ padding-block-start: clamp(4.25rem, 7.4vw + 1rem, 8.5rem);
 padding-block-start: clamp(4rem, 6.8vw + 1rem, 8rem);
 padding-block-end: clamp(4rem, 6.8vw + 1rem, 8rem);
 }
-498: .dealifly-core-service-visual {
+.dealifly-core-service-visual {
 
 border: 1px solid var(--border);
 box-shadow: none;
 }
-503: .dealifly-detail-media {
+.dealifly-detail-media {
 
 border: 1px solid var(--border);
 border-radius: var(--radius-lg);
 overflow: hidden;
 background: var(--surface);
 }
-510: .dealifly-theme-page {
+.dealifly-theme-page {
 
 --bs-dark: #09090d;
 --bs-dark-rgb: 9, 9, 13;
 }
-515: .dealifly-theme-page main[data-bs-theme="dark"] {
+.dealifly-theme-page main[data-bs-theme="dark"] {
 
 --bs-body-bg: var(--surface);
 --bs-body-bg-rgb: 13, 13, 18;
@@ -525,98 +534,98 @@ background: var(--surface);
 --bs-border-color-translucent: var(--border);
 --bs-heading-color: var(--text-primary);
 }
-529: .dealifly-pricing-page .dealifly-pricing {
+.dealifly-pricing-page .dealifly-pricing {
 
 background:
 radial-gradient(circle at 14% 12%, rgba(118, 87, 217, 0.1), transparent 26rem),
 radial-gradient(circle at 88% 78%, rgba(216, 90, 207, 0.05), transparent 28rem),
 var(--bg);
 }
-536: .dealifly-pricing-page .dealifly-pricing-card,
+.dealifly-pricing-page .dealifly-pricing-card,
 
 .dealifly-pricing-page .dealifly-specialized-plan {
 background: var(--surface);
 border-color: var(--border);
 box-shadow: none;
 }
-543: .dealifly-pricing-page .dealifly-pricing-card--featured {
+.dealifly-pricing-page .dealifly-pricing-card--featured {
 
 border-color: rgba(143, 122, 232, 0.32);
 background: radial-gradient(circle at 50% 0, rgba(118, 87, 217, 0.12), transparent 16rem), var(--surface);
 }
-548: .dealifly-pricing-page .dealifly-pricing-card::before {
+.dealifly-pricing-page .dealifly-pricing-card::before {
 
 background: linear-gradient(90deg, transparent, rgba(183, 165, 245, 0.35), transparent);
 }
-552: .dealifly-pricing-page .dealifly-additional-services,
+.dealifly-pricing-page .dealifly-additional-services,
 
 .dealifly-pricing-page .dealifly-specialized-pricing {
 background: var(--bg-secondary);
 }
-557: .dealifly-pricing-page .dealifly-additional-services__group {
+.dealifly-pricing-page .dealifly-additional-services__group {
 
 background: var(--surface);
 border-color: var(--border);
 }
-562: .dealifly-pricing-page .dealifly-specialized-plan::before {
+.dealifly-pricing-page .dealifly-specialized-plan::before {
 
 opacity: 0.55;
 }
-566: .dealifly-footer {
+.dealifly-footer {
 
 background: var(--bg-secondary);
 border-top: 1px solid var(--border);
 }
-571: .form-control,
+.form-control,
 
 .form-select {
 background-color: var(--surface);
 border-color: var(--border);
 color: var(--text-primary);
 }
-578: .form-control:focus,
+.form-control:focus,
 
 .form-select:focus {
 border-color: rgba(143, 122, 232, 0.45);
 box-shadow: 0 0 0 0.2rem rgba(118, 87, 217, 0.12);
 }
-584: .accordion-item,
+.accordion-item,
 
 .dealifly-faq .accordion-item {
 background: var(--surface);
 border-color: var(--border);
 }
-590: .dealifly-faq .accordion-button:not(.collapsed) {
+.dealifly-faq .accordion-button:not(.collapsed) {
 
 color: var(--text-primary);
 background: var(--surface-hover);
 }
-595: .dealifly-arrow-label {
+.dealifly-arrow-label {
 
 color: var(--lavender);
 }
-599: .dealifly-specialized-service-nav .btn.active,
+.dealifly-specialized-service-nav .btn.active,
 
 .dealifly-specialized-service-nav .btn[aria-selected="true"] {
 background-color: rgba(118, 87, 217, 0.18) !important;
 border-color: rgba(143, 122, 232, 0.35) !important;
 color: var(--text-primary) !important;
 }
-606: @media (max-width: 767.98px) {
+@media (max-width: 767.98px) {
 
 .hero-8 h1 {
 line-height: 1.12;
 }
-611:     .hero-8__content {
+.hero-8__content {
 
 padding-block-start: 6.25rem;
 }
-615:     .primary-header .btn-primary {
+.primary-header .btn-primary {
 
 width: 100%;
 justify-content: center;
 }
-620:     .section-space-y,
+.section-space-y,
 
 .dealifly-specialized-services,
 .dealifly-planning-section,
@@ -627,10 +636,238 @@ padding-block-start: 3.5rem;
 padding-block-end: 3.5rem;
 }
 }
-631: @media (min-width: 768px) and (max-width: 991.98px) {
+@media (min-width: 768px) and (max-width: 991.98px) {
 
 .hero-8 h1 {
 max-width: 16ch;
 margin-inline: auto;
 }
+}
+
+
+/* ==========================================================================
+   UNIFIED FLOATING NAVBAR STYLES (Applies across all pages: Home, Services, Industries)
+   ========================================================================== */
+.primary-header.dealifly-floating-nav,
+.primary-header {
+    position: sticky !important;
+    top: 14px !important;
+    z-index: 1080 !important;
+    width: calc(100% - 64px) !important;
+    max-width: 1260px !important;
+    margin: 14px auto 0 !important;
+    background: rgba(8, 8, 12, 0.85) !important;
+    backdrop-filter: blur(18px) !important;
+    -webkit-backdrop-filter: blur(18px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.10) !important;
+    border-radius: 36px !important;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.65), 0 0 1px 1px rgba(255, 255, 255, 0.04) !important;
+    padding: 0.5rem 1.4rem !important;
+    transition: background-color 200ms ease, border-color 200ms ease, box-shadow 200ms ease !important;
+}
+
+.primary-header > .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
+}
+
+/* Dealifly Logo */
+.primary-header .dealifly-nav-logo {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.65rem !important;
+    text-decoration: none !important;
+}
+
+.primary-header .dealifly-nav-logo__name {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    background: none !important;
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em !important;
+}
+
+.primary-header .dealifly-nav-logo__mark {
+    width: 34px !important;
+    height: 34px !important;
+    display: inline-block !important;
+    object-fit: contain !important;
+}
+
+/* Nav Links & Pill Hover/Active */
+.primary-header .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.82) !important;
+    font-size: 0.92rem !important;
+    font-weight: 500 !important;
+    padding: 0.42rem 0.95rem !important;
+    border-radius: 9999px !important;
+    transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    border: 1px solid transparent !important;
+}
+
+.primary-header .navbar-nav .nav-link:hover {
+    color: #FFFFFF !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.primary-header .navbar-nav .nav-link.active,
+.primary-header .navbar-nav .nav-item.active > .nav-link,
+.primary-header .navbar-nav .nav-item:hover > .nav-link {
+    color: #FFFFFF !important;
+    background-color: rgba(118, 87, 217, 0.18) !important;
+    border: 1px solid rgba(143, 122, 232, 0.32) !important;
+}
+
+/* Caret Arrow: Single, rotating on hover */
+.primary-header .dealifly-nav-caret {
+    font-size: 0.65rem !important;
+    opacity: 0.75 !important;
+    transition: transform 200ms ease, color 200ms ease !important;
+    display: inline-block !important;
+    margin-left: 0.35rem !important;
+    vertical-align: middle !important;
+}
+
+.primary-header .has-sub-menu:hover .dealifly-nav-caret,
+.primary-header .dealifly-nav-dropdown:hover .dealifly-nav-caret {
+    transform: rotate(180deg) !important;
+    opacity: 1 !important;
+    color: #b7a5f5 !important;
+}
+
+/* Eliminate duplicate dropdown chevron across entire site */
+.primary-header .has-sub-menu > .nav-link::after,
+.has-sub-menu > .nav-link::after,
+.navigation-1.has-sub-menu > .nav-link::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Dropdown Menu Panels */
+@media (min-width: 992px) {
+    .primary-header .dealifly-dropdown-menu,
+    .primary-header .navigation-1__menu {
+        position: absolute !important;
+        top: 100% !important;
+        left: 50% !important;
+        transform: translateX(-50%) translateY(8px) !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        background: rgba(10, 10, 16, 0.96) !important;
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+        border-radius: 20px !important;
+        box-shadow: 0 20px 48px -8px rgba(0, 0, 0, 0.85), 0 0 1px 1px rgba(255, 255, 255, 0.06) !important;
+        padding: 0.65rem !important;
+        display: block !important;
+        transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease !important;
+        min-width: 280px !important;
+        z-index: 1090 !important;
+        list-style: none !important;
+        margin-top: 6px !important;
+    }
+
+    .primary-header .dealifly-nav-dropdown:hover .dealifly-dropdown-menu,
+    .primary-header .dealifly-nav-dropdown:focus-within .dealifly-dropdown-menu,
+    .primary-header .has-sub-menu:hover .navigation-1__menu {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        transform: translateX(-50%) translateY(0) !important;
+    }
+
+    .primary-header .dealifly-dropdown-menu--solutions,
+    .primary-header .dealifly-dropdown-menu--services {
+        min-width: 310px !important;
+    }
+}
+
+.primary-header .dealifly-dropdown-menu .navigation-1__menu-list {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.primary-header .dealifly-dropdown-menu .navigation-1__menu-link {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.2rem !important;
+    padding: 0.6rem 0.9rem !important;
+    border-radius: 12px !important;
+    text-decoration: none !important;
+    transition: background-color 140ms ease !important;
+}
+
+.primary-header .dealifly-dropdown-menu .navigation-1__menu-link:hover {
+    background-color: rgba(255, 255, 255, 0.07) !important;
+}
+
+.primary-header .dealifly-dropdown-menu .dealifly-drop-title {
+    color: #FFFFFF !important;
+    font-size: 0.88rem !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.01em !important;
+}
+
+.primary-header .dealifly-dropdown-menu .dealifly-drop-sub {
+    color: rgba(255, 255, 255, 0.55) !important;
+    font-size: 0.74rem !important;
+    line-height: 1.35 !important;
+}
+
+/* CTA 'Get Started' Button */
+.primary-header .btn-primary {
+    background: #7657D9 !important;
+    background-image: linear-gradient(135deg, #8465E5 0%, #7657D9 100%) !important;
+    color: #FFFFFF !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    padding: 0.48rem 1.25rem !important;
+    border-radius: 9999px !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    box-shadow: 0 2px 10px rgba(118, 87, 217, 0.25) !important;
+    transition: transform 150ms ease, box-shadow 150ms ease, filter 150ms ease !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.primary-header .btn-primary:hover {
+    transform: translateY(-1px) !important;
+    filter: brightness(1.08) !important;
+    box-shadow: 0 4px 14px rgba(118, 87, 217, 0.42) !important;
+    color: #FFFFFF !important;
+}
+
+/* Mobile & Tablet */
+@media (max-width: 991.98px) {
+    .primary-header.dealifly-floating-nav,
+    .primary-header {
+        width: calc(100% - 24px) !important;
+        margin: 10px auto 0 !important;
+        border-radius: 24px !important;
+        padding: 0.5rem 1rem !important;
+    }
+
+    .primary-header .dealifly-dropdown-menu,
+    .primary-header .navigation-1__menu {
+        position: static !important;
+        transform: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        background: rgba(14, 14, 22, 0.95) !important;
+        border-radius: 14px !important;
+        margin: 0.5rem 0 !important;
+        padding: 0.5rem !important;
+        box-shadow: none !important;
+    }
 }

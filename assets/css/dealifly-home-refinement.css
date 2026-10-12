@@ -147,9 +147,12 @@ body.dealifly-homepage .primary-header .navbar-nav .nav-item.active > .nav-link 
 }
 
 /* Hide duplicate template chevron since Dealifly uses custom .dealifly-nav-caret */
+.primary-header .has-sub-menu > .nav-link::after,
 body.dealifly-homepage .primary-header .has-sub-menu > .nav-link::after {
     display: none !important;
+    content: none !important;
 }
+
 
 
 /* CTA "Get Started" Button */

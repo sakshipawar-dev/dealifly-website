@@ -26,7 +26,16 @@
     --df-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
+/* Eliminate duplicate dropdown chevron across entire site */
+.primary-header .has-sub-menu > .nav-link::after,
+.has-sub-menu > .nav-link::after,
+.navigation-1.has-sub-menu > .nav-link::after {
+    display: none !important;
+    content: none !important;
+}
+
 body.dealifly-solutions-page {
+
     background-color: var(--df-bg) !important;
     color: var(--df-text-secondary);
     overflow-x: hidden;

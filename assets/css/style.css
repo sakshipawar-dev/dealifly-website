@@ -10014,19 +10014,8 @@ small,
 }
 
 .primary-header .has-sub-menu>.nav-link::after {
-    --svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/></svg>');
-    content: "";
-    display: inline-block;
-    width: 0.875rem;
-    height: 0.875rem;
-    flex-shrink: 0;
-    background-color: currentColor;
-    -webkit-mask-image: var(--svg);
-    mask-image: var(--svg);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: 100% 100%;
-    mask-size: 100% 100%;
+    display: none !important;
+    content: none !important;
 }
 
 .primary-header .has-sub-2nd>.navigation-1__menu-link {
