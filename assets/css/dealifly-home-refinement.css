@@ -752,7 +752,7 @@ body.dealifly-homepage .dealifly-industry-card__cta {
     font-size: 0.88rem;
     font-weight: 600;
     color: rgba(155, 130, 232, 0.82);
-    margin-top: auto;
+    text-decoration: none !important;
     transition: color 350ms ease;
 }
 
@@ -768,6 +768,66 @@ body.dealifly-homepage .dealifly-industry-card__cta i {
 body.dealifly-homepage .dealifly-industry-card:hover .dealifly-industry-card__cta i {
     transform: translateX(4px);
 }
+
+/* Card Main Clickable Link Area */
+body.dealifly-homepage .dealifly-industry-card__main-link {
+    text-decoration: none !important;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* Bottom Actions Row */
+body.dealifly-homepage .dealifly-industry-card__cta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+    padding-top: 1.15rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    flex-wrap: wrap;
+}
+
+/* Growth Plan Download Button */
+body.dealifly-homepage .dealifly-btn-growth-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #ffffff !important;
+    background: rgba(168, 85, 247, 0.16);
+    border: 1px solid rgba(183, 165, 245, 0.42);
+    padding: 0.45rem 1.05rem;
+    border-radius: 999px;
+    text-decoration: none !important;
+    box-shadow: 0 0 14px rgba(168, 85, 247, 0.2);
+    transition: all 250ms ease;
+    white-space: nowrap;
+}
+
+body.dealifly-homepage .dealifly-btn-growth-download i {
+    font-size: 0.85rem;
+    color: #b7a5f5;
+    transition: transform 250ms ease, color 250ms ease;
+}
+
+body.dealifly-homepage .dealifly-btn-growth-download:hover {
+    background: linear-gradient(135deg, #7657d9 0%, #a855f7 100%);
+    border-color: #b7a5f5;
+    color: #ffffff !important;
+    box-shadow: 0 0 22px rgba(168, 85, 247, 0.55);
+    transform: translateY(-2px);
+}
+
+body.dealifly-homepage .dealifly-btn-growth-download:hover i {
+    color: #ffffff;
+    transform: translateY(1px);
+}
+
 
 /* Reduced Motion Override */
 @media (prefers-reduced-motion: reduce) {
