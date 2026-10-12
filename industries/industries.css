@@ -539,20 +539,28 @@
 }
 
 .ind-section-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #b7a5f5;
-  background: rgba(168, 85, 247, 0.12);
-  border: 1px solid rgba(183, 165, 245, 0.35);
-  border-radius: var(--ind-radius-pill);
-  padding: 0.35rem 0.95rem;
-  box-shadow: 0 0 12px rgba(168, 85, 247, 0.15);
-  margin-bottom: 0.85rem;
+  display: block !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  font-family: var(--dealifly-font-sans, "Plus Jakarta Sans", sans-serif) !important;
+  font-size: 0.8125rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  color: #b7a5f5 !important;
+  line-height: 1.35 !important;
+  margin-bottom: 0.5rem !important;
+  text-align: left !important;
+}
+
+.ind-section-eyebrow i,
+.ind-section-eyebrow svg {
+  display: none !important;
 }
 
 .ind-section-title {
@@ -563,6 +571,7 @@
   color: #ffffff;
   /* crisp white */
   margin-bottom: 0.85rem;
+  text-align: left !important;
 }
 
 .ind-section-title span {
@@ -579,12 +588,18 @@
   color: #cbd5e1;
   /* slate grey */
   max-width: 860px;
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
 }
 
 .ind-section-paragraphs {
   max-width: 860px;
   margin-top: 1.25rem;
   margin-bottom: 2.25rem;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  text-align: left !important;
 }
 
 .ind-section-paragraph {
@@ -592,12 +607,22 @@
   line-height: 1.75;
   color: #cbd5e1;
   margin-bottom: 0.85rem;
-  text-align: center;
+  text-align: left !important;
 }
 
 .ind-section-paragraph:last-child {
   margin-bottom: 0;
 }
+
+/* Align all industry section headers to left (matching service page design) */
+.ind-automation .text-center,
+.ind-growth .text-center,
+.ind-process .text-center,
+.ind-services-matrix .text-center,
+.ind-section-header {
+  text-align: left !important;
+}
+
 
 .ind-auto-grid {
   display: grid;
