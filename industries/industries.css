@@ -4708,25 +4708,39 @@
 .ind-contact-eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.75rem;
+  gap: 0.55rem;
+  font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #c084fc;
-  background: rgba(192, 132, 252, 0.08);
-  border: 1px solid rgba(192, 132, 252, 0.25);
+  color: #b7a5f5;
+  background: rgba(183, 165, 245, 0.1);
+  border: 1px solid rgba(183, 165, 245, 0.3);
   padding: 0.35rem 0.85rem;
   border-radius: 999px;
   width: fit-content;
+  position: relative;
+  line-height: 1;
 }
 
-.ind-contact-eyebrow .dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #c084fc;
-  box-shadow: 0 0 8px #c084fc;
+.ind-contact-eyebrow .dot,
+.ind-contact-eyebrow .ind-contact-dot {
+  position: static !important;
+  display: inline-block !important;
+  width: 7px !important;
+  height: 7px !important;
+  min-width: 7px !important;
+  min-height: 7px !important;
+  max-width: 7px !important;
+  max-height: 7px !important;
+  border-radius: 50% !important;
+  background: #b7a5f5 !important;
+  box-shadow: 0 0 8px rgba(183, 165, 245, 0.8) !important;
+  flex-shrink: 0 !important;
+  margin: 0 !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
 }
 
 .ind-contact-title {
