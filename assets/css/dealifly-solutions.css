@@ -736,7 +736,7 @@ body.dealifly-solutions-page .primary-header {
     border: 1.5px solid #7C3AED !important;
     width: 44px;
     height: 44px;
-    border-radius: 50% !important;
+    border-radius: 10px !important;
     box-shadow: 0 0 14px rgba(124, 58, 237, 0.4) !important;
     display: flex;
     align-items: center;
@@ -948,7 +948,7 @@ body.dealifly-solutions-page .primary-header {
 .dealifly-hub-card__icon {
     width: 44px;
     height: 44px;
-    border-radius: 50% !important;
+    border-radius: 12px !important;
     background: rgba(124, 58, 237, 0.2) !important;
     border: 1.5px solid #7C3AED !important;
     display: flex;
