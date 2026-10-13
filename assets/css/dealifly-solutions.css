@@ -224,13 +224,15 @@ body.dealifly-solutions-page .primary-header {
 }
 
 .dealifly-btn-primary {
-    background: #6c4cee !important;
+    background: #6342ff !important;
+    background: linear-gradient(135deg, #6c4cee 0%, #5b3af0 100%) !important;
     border: 1px solid rgba(255, 255, 255, 0.15) !important;
     color: #FFFFFF !important;
     font-weight: 600;
-    padding: 0.8rem 1.75rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 18px rgba(108, 76, 238, 0.45);
+    font-size: 0.98rem;
+    padding: 0.82rem 1.85rem;
+    border-radius: 9px !important;
+    box-shadow: 0 4px 18px rgba(99, 66, 255, 0.45);
     transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
     display: inline-flex;
     align-items: center;
@@ -240,31 +242,33 @@ body.dealifly-solutions-page .primary-header {
 
 .dealifly-btn-primary:hover {
     transform: translateY(-2px);
-    background: #7a5cf2 !important;
-    box-shadow: 0 8px 24px rgba(108, 76, 238, 0.6);
+    background: #7454ff !important;
+    background: linear-gradient(135deg, #7858ff 0%, #6846ff 100%) !important;
+    box-shadow: 0 8px 24px rgba(99, 66, 255, 0.6);
     color: #FFFFFF !important;
 }
 
 .dealifly-btn-secondary {
-    background: rgba(255, 255, 255, 0.04) !important;
-    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    background: rgba(18, 18, 24, 0.75) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
     color: #FFFFFF !important;
     font-weight: 600;
-    padding: 0.8rem 1.75rem;
-    border-radius: 8px;
+    font-size: 0.98rem;
+    padding: 0.82rem 1.85rem;
+    border-radius: 9px !important;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     transition: background-color 200ms ease, border-color 200ms ease, transform 200ms ease;
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.55rem;
     text-decoration: none;
 }
 
 .dealifly-btn-secondary:hover {
     transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.09) !important;
-    border-color: rgba(255, 255, 255, 0.3) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.35) !important;
     color: #FFFFFF !important;
 }
 

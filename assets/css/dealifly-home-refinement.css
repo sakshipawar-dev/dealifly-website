@@ -2693,3 +2693,64 @@ body.dealifly-homepage .dealifly-footer__copyright {
     font-size: 0.8125rem !important;
     color: rgba(245, 245, 247, 0.45) !important;
 }
+
+/* Hero Section Action Buttons - Unified Sleek Rounded Rectangle Matching Reference */
+.dealifly-btn-primary,
+.ind-btn-primary {
+    border-radius: 9px !important;
+    padding: 0.82rem 1.85rem !important;
+    font-size: 0.98rem !important;
+    font-weight: 600 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    white-space: nowrap !important;
+    background: #6342ff !important;
+    background: linear-gradient(135deg, #6c4cee 0%, #5b3af0 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 18px rgba(99, 66, 255, 0.45) !important;
+    transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease, border-color 200ms ease !important;
+}
+
+.dealifly-btn-primary:hover,
+.ind-btn-primary:hover {
+    transform: translateY(-2px) !important;
+    background: #7454ff !important;
+    background: linear-gradient(135deg, #7858ff 0%, #6846ff 100%) !important;
+    box-shadow: 0 8px 24px rgba(99, 66, 255, 0.6) !important;
+    color: #FFFFFF !important;
+}
+
+.dealifly-btn-secondary,
+.ind-btn-ghost {
+    border-radius: 9px !important;
+    padding: 0.82rem 1.85rem !important;
+    font-size: 0.98rem !important;
+    font-weight: 600 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.55rem !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    white-space: nowrap !important;
+    background: rgba(18, 18, 24, 0.75) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+    color: #FFFFFF !important;
+    box-shadow: none !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease, border-color 200ms ease !important;
+}
+
+.dealifly-btn-secondary:hover,
+.ind-btn-ghost:hover {
+    transform: translateY(-2px) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.35) !important;
+    color: #FFFFFF !important;
+}

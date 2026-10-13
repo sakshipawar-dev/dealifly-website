@@ -2496,16 +2496,16 @@ a.dealifly-contact-info-value:hover {
     display: none !important;
 }
 
-/* Hero Section Action Buttons - Sleek Rounded Pill Matching Design Reference */
+/* Hero Section Action Buttons - Sleek Rounded Rectangle Matching Design Reference */
 .dealifly-solution-hero-actions .dealifly-btn-primary,
 .dealifly-solution-hero-actions .dealifly-btn-secondary,
 .ind-hero__buttons .dealifly-btn-primary,
 .ind-hero__buttons .dealifly-btn-secondary,
 .ind-hero__buttons .ind-btn-primary,
 .ind-hero__buttons .ind-btn-ghost {
-    border-radius: 9999px !important;
-    padding: 0.78rem 1.7rem !important;
-    font-size: 0.95rem !important;
+    border-radius: 9px !important;
+    padding: 0.82rem 1.85rem !important;
+    font-size: 0.98rem !important;
     font-weight: 600 !important;
     display: inline-flex !important;
     align-items: center !important;
@@ -2520,26 +2520,28 @@ a.dealifly-contact-info-value:hover {
 .dealifly-solution-hero-actions .dealifly-btn-primary,
 .ind-hero__buttons .dealifly-btn-primary,
 .ind-hero__buttons .ind-btn-primary {
-    background: linear-gradient(135deg, #7657d9 0%, #603ec9 100%) !important;
-    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    background: #6342ff !important;
+    background: linear-gradient(135deg, #6c4cee 0%, #5b3af0 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
     color: #FFFFFF !important;
-    box-shadow: 0 4px 18px rgba(118, 87, 217, 0.45) !important;
+    box-shadow: 0 4px 18px rgba(99, 66, 255, 0.45) !important;
 }
 
 .dealifly-solution-hero-actions .dealifly-btn-primary:hover,
 .ind-hero__buttons .dealifly-btn-primary:hover,
 .ind-hero__buttons .ind-btn-primary:hover {
     transform: translateY(-2px) !important;
-    background: linear-gradient(135deg, #8465e5 0%, #6e4bd4 100%) !important;
-    box-shadow: 0 8px 24px rgba(118, 87, 217, 0.6) !important;
+    background: #7454ff !important;
+    background: linear-gradient(135deg, #7858ff 0%, #6846ff 100%) !important;
+    box-shadow: 0 8px 24px rgba(99, 66, 255, 0.6) !important;
     color: #FFFFFF !important;
 }
 
 .dealifly-solution-hero-actions .dealifly-btn-secondary,
 .ind-hero__buttons .dealifly-btn-secondary,
 .ind-hero__buttons .ind-btn-ghost {
-    background: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    background: rgba(18, 18, 24, 0.75) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
     color: #FFFFFF !important;
     box-shadow: none !important;
     backdrop-filter: blur(8px) !important;
@@ -2550,8 +2552,8 @@ a.dealifly-contact-info-value:hover {
 .ind-hero__buttons .dealifly-btn-secondary:hover,
 .ind-hero__buttons .ind-btn-ghost:hover {
     transform: translateY(-2px) !important;
-    background: rgba(255, 255, 255, 0.09) !important;
-    border-color: rgba(255, 255, 255, 0.3) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.35) !important;
     color: #FFFFFF !important;
 }
 
