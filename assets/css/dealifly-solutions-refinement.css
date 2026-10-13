@@ -801,6 +801,16 @@ body.dealifly-solutions-page .dealifly-footer .container {
     flex-shrink: 0;
 }
 
+.dealifly-approach-box__icon i,
+.dealifly-hub-card__icon i {
+    font-size: 1.35rem !important;
+    color: #C4B5FD !important;
+    line-height: 1 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
 .dealifly-approach-box__title {
     font-size: clamp(1.4rem, 2vw, 1.7rem);
     font-weight: 700;
