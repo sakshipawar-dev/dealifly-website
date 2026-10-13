@@ -19,9 +19,9 @@
     <link rel="stylesheet" href="assets/css/ff-1.css?v=5b2dea53fa53">
     <link rel="stylesheet" href="assets/css/ff-2.css?v=5b2dea53fa53">
     <link rel="stylesheet" href="assets/css/prism.css?v=5b2dea53fa53">
-    <link rel="stylesheet" href="assets/css/style.css?v=5b2dea53fa53">
-    <link rel="stylesheet" href="assets/css/dealifly-theme.css?v=20260920">
-    <link rel="stylesheet" href="assets/css/dealifly-home-refinement.css?v=20261006_footer_noblue">
+    <link rel="stylesheet" href="assets/css/style.css?v=20261013_preloader_fix">
+    <link rel="stylesheet" href="assets/css/dealifly-theme.css?v=20261013_preloader_fix">
+    <link rel="stylesheet" href="assets/css/dealifly-home-refinement.css?v=20261013_preloader_fix">
 </head>
 
 <body class="bg-dark-saas dealifly-homepage">
@@ -170,6 +170,29 @@
             <span class="preloader__label">Dealifly</span>
         </div>
     </div>
+    <script>
+        (function() {
+            var preloader = document.querySelector('.preloader');
+            if (!preloader) return;
+            var dismiss = function() {
+                if (!preloader) return;
+                preloader.classList.add('preloader--loaded');
+                preloader.style.opacity = '0';
+                preloader.style.pointerEvents = 'none';
+                setTimeout(function() {
+                    if (preloader) preloader.style.display = 'none';
+                }, 300);
+            };
+            if (document.readyState === 'complete' || document.readyState === 'interactive') {
+                setTimeout(dismiss, 150);
+            } else {
+                document.addEventListener('DOMContentLoaded', function() { setTimeout(dismiss, 200); }, { once: true });
+            }
+            window.addEventListener('load', function() { setTimeout(dismiss, 100); }, { once: true });
+            window.addEventListener('pageshow', dismiss);
+            setTimeout(dismiss, 700);
+        })();
+    </script>
     <div id="smooth-wrapper">
         <div id="smooth-content">
             <!-- Hero -->
@@ -1759,7 +1782,7 @@
             });
         }());
     </script>
-    <script src="assets/js/app.js?v=5b2dea53fa53"></script>
+    <script src="assets/js/app.js?v=20261013_preloader_fix"></script>
 </body>
 
 </html>

@@ -4149,6 +4149,26 @@ small,
     }
 }
 
+/* Fail-safe: Pure CSS preloader auto-dismiss (zero dependence on JS) */
+@keyframes dealiflyPreloaderAutoDismiss {
+    0%, 60% {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    99% {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        display: none !important;
+    }
+}
+
 /* Preloader */
 .preloader {
     position: fixed;
@@ -4166,6 +4186,7 @@ small,
     opacity: 1;
     visibility: visible;
     transition: opacity 420ms ease, visibility 420ms ease;
+    animation: dealiflyPreloaderAutoDismiss 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards !important;
 }
 
 .preloader__content {
@@ -4230,8 +4251,10 @@ small,
 }
 
 .preloader--loaded {
-    opacity: 0;
-    visibility: hidden;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    display: none !important;
 }
 
 @keyframes preloaderOrbit {

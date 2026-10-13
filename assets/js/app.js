@@ -1,31 +1,62 @@
 "use strict";
 
-document.addEventListener("DOMContentLoaded", function () {
+// Fail-safe immediate preloader dismissal: runs first before anything else
+(function () {
+  var dismiss = function () {
+    var p = document.querySelector(".preloader");
+    if (!p) return;
+    p.classList.add("preloader--loaded");
+    p.style.opacity = "0";
+    p.style.pointerEvents = "none";
+    setTimeout(function () {
+      if (p) p.style.display = "none";
+    }, 350);
+  };
+  if (document.readyState === "complete" || document.readyState === "interactive") {
+    setTimeout(dismiss, 100);
+  } else {
+    document.addEventListener("DOMContentLoaded", dismiss, { once: true });
+  }
+  window.addEventListener("load", dismiss, { once: true });
+  window.addEventListener("pageshow", dismiss);
+  setTimeout(dismiss, 800);
+})();
+
+var initDealifly = function () {
   var body = document.querySelector("body");
   var preloader = document.querySelector(".preloader");
   var hidePreloader = function hidePreloader() {
+    if (!preloader) {
+      preloader = document.querySelector(".preloader");
+    }
     if (!preloader) return;
     preloader.classList.add("preloader--loaded");
+    preloader.style.opacity = "0";
+    preloader.style.pointerEvents = "none";
     window.setTimeout(function () {
-      if (preloader.classList.contains("preloader--loaded")) {
+      if (preloader) {
         preloader.style.display = "none";
       }
-    }, 450);
+    }, 350);
   };
   var showPreloader = function showPreloader() {
+    if (!preloader) {
+      preloader = document.querySelector(".preloader");
+    }
     if (!preloader) return;
     preloader.style.display = "flex";
     preloader.classList.remove("preloader--loaded");
+    preloader.style.opacity = "1";
+    preloader.style.pointerEvents = "auto";
+    window.setTimeout(hidePreloader, 1000);
   };
 
-  // Register the escape path before optional animation features initialize. This
-  // keeps the full-screen loader from trapping the page if an older browser is
-  // missing one of the enhancement APIs used later in this file.
+  hidePreloader();
   if (document.readyState === "complete") {
     window.setTimeout(hidePreloader, 100);
   } else {
     window.addEventListener("load", function () {
-      window.setTimeout(hidePreloader, 300);
+      window.setTimeout(hidePreloader, 200);
     }, {
       once: true
     });
@@ -33,7 +64,13 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("pageshow", function () {
     window.setTimeout(hidePreloader, 100);
   });
-  gsap.registerPlugin(ScrollTrigger, Flip, SplitText, DrawSVGPlugin, ScrollSmoother);
+  try {
+    if (typeof gsap !== "undefined" && gsap.registerPlugin) {
+      gsap.registerPlugin(ScrollTrigger, Flip, SplitText, DrawSVGPlugin, ScrollSmoother);
+    }
+  } catch (pluginErr) {
+    console.warn("GSAP plugin registration warning:", pluginErr);
+  }
 
   /**
    * Slide Up
@@ -577,7 +614,10 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!link || link.target === "_blank" || link.hasAttribute("download")) return;
     var destination = new URL(link.href, window.location.href);
     var isInternalPage = destination.origin === window.location.origin && (destination.pathname !== window.location.pathname || destination.search !== window.location.search);
-    if (isInternalPage) showPreloader();
+    if (isInternalPage) {
+      showPreloader();
+      window.setTimeout(hidePreloader, 1000);
+    }
   });
 
   /**
@@ -1205,7 +1245,13 @@ document.addEventListener("DOMContentLoaded", function () {
       textAnimation();
     });
   });
-});
+};
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initDealifly, { once: true });
+} else {
+  initDealifly();
+}
 "use strict";
 
 (function () {

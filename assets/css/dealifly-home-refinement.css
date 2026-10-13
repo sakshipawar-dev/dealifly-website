@@ -518,9 +518,37 @@ body.dealifly-homepage .cta-6 svg {
     opacity: 0.16 !important;
 }
 
-/* Preloader glow reduction */
+/* Preloader glow reduction and Pure CSS Fail-safe Auto-Dismiss */
+@keyframes dealiflyPreloaderAutoDismiss {
+    0%, 60% {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    99% {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        display: none !important;
+    }
+}
+
 body.dealifly-homepage .preloader {
     background-color: var(--dealifly-bg) !important;
+    animation: dealiflyPreloaderAutoDismiss 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards !important;
+}
+
+body.dealifly-homepage .preloader.preloader--loaded,
+.preloader--loaded {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    display: none !important;
 }
 
 body.dealifly-homepage .preloader__brand {
