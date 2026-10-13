@@ -797,14 +797,20 @@ var initDealifly = function () {
    */
   var mm = gsap.matchMedia();
   mm.add("(min-width: 992px)", function () {
-    var smoother = ScrollSmoother.create({
-      wrapper: "#smooth-wrapper",
-      content: "#smooth-content",
-      smooth: 1.5,
-      effects: true,
-      normalizeScroll: true,
-      smoothTouch: 0.1
-    });
+    var isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
+    if (!isTouchDevice && typeof ScrollSmoother !== "undefined" && document.querySelector("#smooth-wrapper") && document.querySelector("#smooth-content")) {
+      try {
+        var smoother = ScrollSmoother.create({
+          wrapper: "#smooth-wrapper",
+          content: "#smooth-content",
+          smooth: 1.5,
+          effects: true,
+          normalizeScroll: false
+        });
+      } catch (smoothErr) {
+        console.warn("ScrollSmoother init warning:", smoothErr);
+      }
+    }
     var folderCards = document.querySelectorAll(".folder-card-list li");
     if (folderCards.length) {
       gsap.utils.toArray(folderCards).forEach(function (card, i) {
@@ -1273,3 +1279,17 @@ if (document.readyState === "loading") {
   statusElement.textContent = messages[status];
   statusElement.classList.add(status === "success" ? "success" : "error");
 })();
+
+// Robust fail-safe mobile navigation toggler
+document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest(".navbar-toggler");
+    if (!btn) return;
+    var targetSelector = btn.getAttribute("data-bs-target") || "#navbar0";
+    var navCollapse = document.querySelector(targetSelector);
+    if (!navCollapse) return;
+    if (typeof bootstrap === "undefined" || !bootstrap.Collapse) {
+      navCollapse.classList.toggle("show");
+    }
+  });
+});

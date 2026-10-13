@@ -1899,6 +1899,31 @@
   transform: translateY(0);
 }
 
+/* Zero-JS & Mobile Fail-Safe: Hero section MUST NEVER be hidden by default */
+.ind-hero,
+.ind-hero .ind-reveal,
+.ind-hero-left-content,
+.ind-hero-left-content.ind-reveal,
+.ind-hero__title,
+.ind-hero__eyebrow,
+.ind-hero__desc,
+.ind-hero__buttons,
+.ind-hero-trust-bar,
+.dealifly-solution-hero,
+.dealifly-solution-hero__content {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+@media (max-width: 991.98px) {
+  .ind-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+}
+
 /* =====================================================================
    RESPONSIVE
    ===================================================================== */
@@ -5652,4 +5677,46 @@ a.ind-contact-info-val:hover {
     grid-template-columns: 1fr;
     gap: 0.85rem;
   }
+}
+
+/* Robust Mobile Navbar Toggler (crisp white icon, touch-ready) */
+@media (max-width: 991.98px) {
+    body.dealifly-homepage .primary-header .navbar-toggler,
+    body.dealifly-homepage .dealifly-floating-nav .navbar-toggler,
+    .primary-header .navbar-toggler,
+    .dealifly-floating-nav .navbar-toggler {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 42px !important;
+        height: 42px !important;
+        padding: 0 !important;
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        outline: none !important;
+        color: #FFFFFF !important;
+        cursor: pointer !important;
+    }
+
+    body.dealifly-homepage .primary-header .navbar-toggler i,
+    body.dealifly-homepage .dealifly-floating-nav .navbar-toggler i,
+    .primary-header .navbar-toggler i,
+    .dealifly-floating-nav .navbar-toggler i {
+        color: #FFFFFF !important;
+        font-size: 1.85rem !important;
+        line-height: 1 !important;
+        display: inline-block !important;
+    }
+}
+
+@media (min-width: 992px) {
+    body.dealifly-homepage .primary-header .navbar-toggler,
+    body.dealifly-homepage .dealifly-floating-nav .navbar-toggler,
+    body.dealifly-homepage .navbar-toggler,
+    .primary-header .navbar-toggler,
+    .dealifly-floating-nav .navbar-toggler,
+    .navbar-toggler {
+        display: none !important;
+    }
 }
