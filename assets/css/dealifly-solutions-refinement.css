@@ -228,12 +228,13 @@ body.dealifly-solutions-page .dealifly-solution-stat-item span {
     font-family: var(--df-font-mono, monospace);
     font-size: 0.88rem;
     font-weight: 700;
-    color: #B7A5F5;
-    background: rgba(118, 87, 217, 0.16);
-    border: 1px solid rgba(155, 130, 232, 0.3);
+    color: #C4B5FD !important;
+    background: rgba(124, 58, 237, 0.2) !important;
+    border: 1.5px solid #7C3AED !important;
     width: 36px;
     height: 36px;
-    border-radius: 9px;
+    border-radius: 50% !important;
+    box-shadow: 0 0 12px rgba(124, 58, 237, 0.35) !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -498,12 +499,13 @@ body.dealifly-solutions-page .dealifly-pipeline-step .dealifly-pipeline-number {
     font-family: var(--df-font-mono, monospace);
     font-size: 0.95rem;
     font-weight: 700;
-    color: #B7A5F5;
-    background: rgba(118, 87, 217, 0.16);
-    border: 1px solid rgba(155, 130, 232, 0.3);
+    color: #C4B5FD !important;
+    background: rgba(124, 58, 237, 0.2) !important;
+    border: 1.5px solid #7C3AED !important;
     width: 38px;
     height: 38px;
-    border-radius: 10px;
+    border-radius: 50% !important;
+    box-shadow: 0 0 14px rgba(124, 58, 237, 0.4) !important;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -766,10 +768,11 @@ body.dealifly-solutions-page .dealifly-footer .container {
 .dealifly-approach-box__icon {
     width: 44px;
     height: 44px;
-    border-radius: 12px;
-    background: rgba(118, 87, 217, 0.15);
-    border: 1px solid rgba(155, 130, 232, 0.3);
-    color: #B7A5F5;
+    border-radius: 50% !important;
+    background: rgba(124, 58, 237, 0.2) !important;
+    border: 1.5px solid #7C3AED !important;
+    color: #C4B5FD !important;
+    box-shadow: 0 0 14px rgba(124, 58, 237, 0.4) !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1063,10 +1066,11 @@ body.dealifly-solutions-page .dealifly-footer .container {
 .dealifly-meta-card__icon {
     width: 40px;
     height: 40px;
-    border-radius: 10px;
-    background: rgba(118, 87, 217, 0.15);
-    border: 1px solid rgba(155, 130, 232, 0.25);
-    color: #B7A5F5;
+    border-radius: 50% !important;
+    background: rgba(124, 58, 237, 0.2) !important;
+    border: 1.5px solid #7C3AED !important;
+    color: #C4B5FD !important;
+    box-shadow: 0 0 14px rgba(124, 58, 237, 0.4) !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2007,24 +2011,26 @@ a.dealifly-contact-info-value:hover {
 .dealifly-growth-2x-icon {
     width: 46px;
     height: 46px;
-    border-radius: 12px;
-    background: rgba(118, 87, 217, 0.15);
-    border: 1px solid rgba(155, 130, 232, 0.3);
-    color: #B7A5F5;
+    border-radius: 50% !important;
+    background: rgba(124, 58, 237, 0.2) !important;
+    border: 1.5px solid #7C3AED !important;
+    color: #C4B5FD !important;
+    box-shadow: 0 0 14px rgba(124, 58, 237, 0.4) !important;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.35rem;
     margin-bottom: 1.5rem;
     flex-shrink: 0;
-    transition: transform 200ms ease, background-color 200ms ease, border-color 200ms ease, color 200ms ease;
+    transition: transform 200ms ease, background-color 200ms ease, border-color 200ms ease, color 200ms ease, box-shadow 200ms ease;
 }
 
 .dealifly-growth-2x-card:hover .dealifly-growth-2x-icon {
     transform: scale(1.08);
-    background: rgba(118, 87, 217, 0.25);
-    border-color: rgba(155, 130, 232, 0.5);
-    color: #FFFFFF;
+    background: rgba(124, 58, 237, 0.35) !important;
+    border-color: #A78BFA !important;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.75) !important;
+    color: #FFFFFF !important;
 }
 
 .dealifly-growth-2x-title {
@@ -2104,10 +2110,11 @@ a.dealifly-contact-info-value:hover {
 .dealifly-format-chip__icon {
     width: 36px;
     height: 36px;
-    border-radius: 10px;
-    background: rgba(118, 87, 217, 0.15);
-    border: 1px solid rgba(155, 130, 232, 0.28);
-    color: #B7A5F5;
+    border-radius: 50% !important;
+    background: rgba(124, 58, 237, 0.2) !important;
+    border: 1.5px solid #7C3AED !important;
+    color: #C4B5FD !important;
+    box-shadow: 0 0 10px rgba(124, 58, 237, 0.35) !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2394,10 +2401,11 @@ a.dealifly-contact-info-value:hover {
 .dealifly-card-icon-badge {
     width: 44px;
     height: 44px;
-    border-radius: 12px;
-    background: rgba(168, 85, 247, 0.14);
-    border: 1px solid rgba(183, 165, 245, 0.3);
-    color: #B7A5F5;
+    border-radius: 50% !important;
+    background: rgba(124, 58, 237, 0.2) !important;
+    border: 1.5px solid #7C3AED !important;
+    color: #C4B5FD !important;
+    box-shadow: 0 0 14px rgba(124, 58, 237, 0.45) !important;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -2409,12 +2417,23 @@ a.dealifly-contact-info-value:hover {
 
 .dealifly-problem-2x2-card:hover .dealifly-card-icon-badge {
     transform: scale(1.08);
-    background: rgba(168, 85, 247, 0.25);
-    border-color: rgba(183, 165, 245, 0.6);
-    color: #FFFFFF;
-    box-shadow: 0 0 16px rgba(168, 85, 247, 0.35);
+    background: rgba(124, 58, 237, 0.35) !important;
+    border-color: #A78BFA !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.75) !important;
 }
 
-
-
-
+/* Universal circular rule for all symbol and icon badge containers across solution pages */
+.dealifly-feature-card__badge,
+.dealifly-approach-box__icon,
+.dealifly-growth-2x-icon,
+.dealifly-card-icon-badge,
+.dealifly-process-row-badge,
+.dealifly-pipeline-number,
+.dealifly-pipeline-card__badge,
+.dealifly-meta-card__icon,
+.dealifly-format-chip__icon,
+.dealifly-hub-card__icon {
+    border-radius: 50% !important;
+    aspect-ratio: 1 / 1 !important;
+}

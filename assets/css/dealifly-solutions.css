@@ -732,11 +732,12 @@ body.dealifly-solutions-page .primary-header {
     font-size: 1rem;
     font-weight: 700;
     color: #FFFFFF;
-    background: linear-gradient(135deg, rgba(118, 87, 217, 0.25) 0%, rgba(216, 90, 207, 0.1) 100%);
-    border: 1px solid rgba(155, 130, 232, 0.35);
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.3) 0%, rgba(91, 33, 182, 0.15) 100%) !important;
+    border: 1.5px solid #7C3AED !important;
     width: 44px;
     height: 44px;
-    border-radius: 10px;
+    border-radius: 50% !important;
+    box-shadow: 0 0 14px rgba(124, 58, 237, 0.4) !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -947,13 +948,14 @@ body.dealifly-solutions-page .primary-header {
 .dealifly-hub-card__icon {
     width: 44px;
     height: 44px;
-    border-radius: 12px;
-    background: rgba(118, 87, 217, 0.12);
-    border: 1px solid rgba(155, 130, 232, 0.22);
+    border-radius: 50% !important;
+    background: rgba(124, 58, 237, 0.2) !important;
+    border: 1.5px solid #7C3AED !important;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--df-lavender);
+    color: #C4B5FD !important;
+    box-shadow: 0 0 14px rgba(124, 58, 237, 0.4) !important;
     font-size: 1.35rem;
 }
 
