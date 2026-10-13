@@ -51,7 +51,16 @@
    ===================================================================== */
 .ind-hero {
   position: relative;
-  padding: clamp(5.5rem, 8vw, 7rem) 0 clamp(1.5rem, 2.5vw, 2.25rem);
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 100vh !important;
+  min-height: 100dvh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  padding-top: clamp(6.25rem, 9.5vh, 8.25rem) !important;
+  padding-bottom: clamp(2.5rem, 4.5vh, 4rem) !important;
   background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(168, 85, 247, 0.22), transparent 70%),
               radial-gradient(ellipse 60% 40% at 85% 20%, rgba(192, 132, 252, 0.10), transparent 60%),
               #07070b;
@@ -5400,7 +5409,16 @@ a.ind-contact-info-val:hover {
    LEFT-ALIGNED HERO (CLEAN LEFT-ALIGNED TYPOGRAPHY, OPEN SPACE ON RIGHT)
    ===================================================================== */
 .ind-hero--left {
-  padding: clamp(6rem, 9.5vw, 8.5rem) 0 clamp(4.5rem, 7vw, 6.5rem);
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 100vh !important;
+  min-height: 100dvh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  padding-top: clamp(6.25rem, 9.5vh, 8.25rem) !important;
+  padding-bottom: clamp(2.5rem, 4.5vh, 4rem) !important;
   text-align: left;
   position: relative;
   overflow: hidden;

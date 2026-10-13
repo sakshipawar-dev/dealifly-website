@@ -75,7 +75,16 @@ body.dealifly-solutions-page .primary-header {
    ================================================================ */
 .dealifly-solution-hero {
     position: relative;
-    padding: clamp(4rem, 8vw, 7rem) 0 clamp(2.5rem, 5vw, 4rem);
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    padding-top: clamp(6.25rem, 9.5vh, 8.25rem) !important;
+    padding-bottom: clamp(2.5rem, 4.5vh, 4rem) !important;
     background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(118, 87, 217, 0.18), transparent 70%),
                 radial-gradient(ellipse 60% 40% at 85% 20%, rgba(216, 90, 207, 0.06), transparent 60%),
                 var(--df-bg);
