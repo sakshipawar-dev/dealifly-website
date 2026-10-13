@@ -2464,15 +2464,47 @@ a.dealifly-contact-info-value:hover {
     border-radius: 10px !important;
 }
 
-/* Hero Section Action Buttons - Sleek Rounded Rectangles Matching Design Reference */
+/* Fail-safe: Pure CSS preloader auto-dismiss (zero dependence on JS) */
+@keyframes dealiflyPreloaderAutoDismiss {
+    0%, 60% {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    99% {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        display: none !important;
+    }
+}
+
+.preloader {
+    animation: dealiflyPreloaderAutoDismiss 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards !important;
+}
+
+.preloader.preloader--loaded,
+.preloader--loaded {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    display: none !important;
+}
+
+/* Hero Section Action Buttons - Sleek Rounded Pill Matching Design Reference */
 .dealifly-solution-hero-actions .dealifly-btn-primary,
 .dealifly-solution-hero-actions .dealifly-btn-secondary,
 .ind-hero__buttons .dealifly-btn-primary,
 .ind-hero__buttons .dealifly-btn-secondary,
 .ind-hero__buttons .ind-btn-primary,
 .ind-hero__buttons .ind-btn-ghost {
-    border-radius: 8px !important;
-    padding: 0.8rem 1.75rem !important;
+    border-radius: 9999px !important;
+    padding: 0.78rem 1.7rem !important;
     font-size: 0.95rem !important;
     font-weight: 600 !important;
     display: inline-flex !important;
@@ -2488,25 +2520,25 @@ a.dealifly-contact-info-value:hover {
 .dealifly-solution-hero-actions .dealifly-btn-primary,
 .ind-hero__buttons .dealifly-btn-primary,
 .ind-hero__buttons .ind-btn-primary {
-    background: #6c4cee !important;
-    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    background: linear-gradient(135deg, #7657d9 0%, #603ec9 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
     color: #FFFFFF !important;
-    box-shadow: 0 4px 18px rgba(108, 76, 238, 0.45) !important;
+    box-shadow: 0 4px 18px rgba(118, 87, 217, 0.45) !important;
 }
 
 .dealifly-solution-hero-actions .dealifly-btn-primary:hover,
 .ind-hero__buttons .dealifly-btn-primary:hover,
 .ind-hero__buttons .ind-btn-primary:hover {
     transform: translateY(-2px) !important;
-    background: #7a5cf2 !important;
-    box-shadow: 0 8px 24px rgba(108, 76, 238, 0.6) !important;
+    background: linear-gradient(135deg, #8465e5 0%, #6e4bd4 100%) !important;
+    box-shadow: 0 8px 24px rgba(118, 87, 217, 0.6) !important;
     color: #FFFFFF !important;
 }
 
 .dealifly-solution-hero-actions .dealifly-btn-secondary,
 .ind-hero__buttons .dealifly-btn-secondary,
 .ind-hero__buttons .ind-btn-ghost {
-    background: rgba(255, 255, 255, 0.04) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
     border: 1px solid rgba(255, 255, 255, 0.16) !important;
     color: #FFFFFF !important;
     box-shadow: none !important;
