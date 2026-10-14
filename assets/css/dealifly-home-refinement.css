@@ -2733,7 +2733,7 @@ body.dealifly-homepage .dealifly-footer__copyright {
 /* Hero Section Action Buttons - Unified Sleek Rounded Rectangle Matching Reference */
 .dealifly-btn-primary,
 .ind-btn-primary {
-    border-radius: 9px !important;
+    border-radius: 10px !important;
     padding: 0.82rem 1.85rem !important;
     font-size: 0.98rem !important;
     font-weight: 600 !important;
@@ -2763,7 +2763,7 @@ body.dealifly-homepage .dealifly-footer__copyright {
 
 .dealifly-btn-secondary,
 .ind-btn-ghost {
-    border-radius: 9px !important;
+    border-radius: 10px !important;
     padding: 0.82rem 1.85rem !important;
     font-size: 0.98rem !important;
     font-weight: 600 !important;

@@ -2507,13 +2507,15 @@ a.dealifly-contact-info-value:hover {
 }
 
 /* Hero Section Action Buttons - Sleek Rounded Rectangle Matching Design Reference */
+.dealifly-solution-hero-actions a,
 .dealifly-solution-hero-actions .dealifly-btn-primary,
 .dealifly-solution-hero-actions .dealifly-btn-secondary,
+.ind-hero__buttons a,
 .ind-hero__buttons .dealifly-btn-primary,
 .ind-hero__buttons .dealifly-btn-secondary,
 .ind-hero__buttons .ind-btn-primary,
 .ind-hero__buttons .ind-btn-ghost {
-    border-radius: 9px !important;
+    border-radius: 10px !important;
     padding: 0.82rem 1.85rem !important;
     font-size: 0.98rem !important;
     font-weight: 600 !important;

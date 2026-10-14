@@ -218,14 +218,20 @@
   gap: 0.85rem;
 }
 
+.ind-hero__buttons a {
+  border-radius: 10px !important;
+}
+
 .dealifly-btn-primary,
-.ind-btn-primary {
+.ind-btn-primary,
+.ind-hero__buttons .dealifly-btn-primary,
+.ind-hero__buttons .ind-btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   padding: 0.82rem 1.85rem;
-  border-radius: 9px !important;
+  border-radius: 10px !important;
   background: #6342ff !important;
   background: linear-gradient(135deg, #6c4cee 0%, #5b3af0 100%) !important;
   color: #fff !important;
@@ -240,7 +246,9 @@
 }
 
 .dealifly-btn-primary:hover,
-.ind-btn-primary:hover {
+.ind-btn-primary:hover,
+.ind-hero__buttons .dealifly-btn-primary:hover,
+.ind-hero__buttons .ind-btn-primary:hover {
   transform: translateY(-2px);
   background: #7454ff !important;
   background: linear-gradient(135deg, #7858ff 0%, #6846ff 100%) !important;
@@ -249,13 +257,15 @@
 }
 
 .dealifly-btn-secondary,
-.ind-btn-ghost {
+.ind-btn-ghost,
+.ind-hero__buttons .dealifly-btn-secondary,
+.ind-hero__buttons .ind-btn-ghost {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.55rem;
   padding: 0.82rem 1.85rem;
-  border-radius: 9px !important;
+  border-radius: 10px !important;
   background: rgba(18, 18, 24, 0.75) !important;
   color: #ffffff !important;
   font-size: 0.98rem;
@@ -270,7 +280,9 @@
 }
 
 .dealifly-btn-secondary:hover,
-.ind-btn-ghost:hover {
+.ind-btn-ghost:hover,
+.ind-hero__buttons .dealifly-btn-secondary:hover,
+.ind-hero__buttons .ind-btn-ghost:hover {
   background: rgba(255, 255, 255, 0.1) !important;
   border-color: rgba(255, 255, 255, 0.35) !important;
   color: #fff !important;
@@ -5581,6 +5593,7 @@ a.ind-contact-info-val:hover {
   .ind-hero--left .ind-hero__buttons .dealifly-btn-secondary {
     width: 100%;
     justify-content: center;
+    border-radius: 10px !important;
   }
 
   .ind-hero-trust-bar {

@@ -231,7 +231,7 @@ body.dealifly-solutions-page .primary-header {
     font-weight: 600;
     font-size: 0.98rem;
     padding: 0.82rem 1.85rem;
-    border-radius: 9px !important;
+    border-radius: 10px !important;
     box-shadow: 0 4px 18px rgba(99, 66, 255, 0.45);
     transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
     display: inline-flex;
@@ -255,7 +255,7 @@ body.dealifly-solutions-page .primary-header {
     font-weight: 600;
     font-size: 0.98rem;
     padding: 0.82rem 1.85rem;
-    border-radius: 9px !important;
+    border-radius: 10px !important;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     transition: background-color 200ms ease, border-color 200ms ease, transform 200ms ease;
