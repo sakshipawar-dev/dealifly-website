@@ -934,6 +934,29 @@ body.dealifly-solutions-page .primary-header {
     gap: 1.5rem;
 }
 
+@media (max-width: 767.98px) {
+    .dealifly-hub-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.15rem !important;
+    }
+    .dealifly-hub-card {
+        padding: 1.25rem 1.35rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .dealifly-hub-filter-bar {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 0.5rem !important;
+    }
+    .dealifly-hub-filter-btn {
+        flex: 1 1 auto !important;
+        text-align: center !important;
+        padding: 0.5rem 0.85rem !important;
+        font-size: 0.8rem !important;
+    }
+}
+
 .dealifly-hub-card {
     background: rgba(12, 12, 17, 0.95);
     border: 1px solid rgba(255, 255, 255, 0.08);

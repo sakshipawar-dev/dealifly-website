@@ -871,3 +871,125 @@ margin-inline: auto;
         box-shadow: none !important;
     }
 }
+
+/* =====================================================================
+   DEALIFLY MOBILE UI STRUCTURE & RESPONSIVENESS OPTIMIZATIONS
+   Strictly scoped to mobile devices (max-width: 767.98px)
+   Protects desktop and tablet (min-width: 768px) pixel-identical
+   ===================================================================== */
+
+@media (max-width: 767.98px) {
+    /* 1. Global Viewport & Horizontal Overflow Shield */
+    html,
+    body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+        position: relative !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* 2. Container & Negative Margin Gutter Correction */
+    .container,
+    .container-fluid {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Prevent Bootstrap large gutters (g-4, g-5, g-xl-8) from blowing out container widths */
+    .row {
+        margin-left: -0.5rem !important;
+        margin-right: -0.5rem !important;
+    }
+
+    .row > * {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .row.g-5,
+    .row.g-4,
+    .row.g-xl-8,
+    .row.g-lg-5,
+    .row.g-md-4 {
+        --bs-gutter-x: 1rem !important;
+        --bs-gutter-y: 1.25rem !important;
+    }
+
+    /* 3. Logo / Partner Carousel Mobile Containment */
+    .hero-8__partner-carousel,
+    .hero-8__partner-track-wrap,
+    .dealifly-partner-ticker-wrap {
+        overflow: hidden !important;
+        max-width: 100vw !important;
+    }
+
+    /* 4. Table Containers Smooth Touch Scrolling */
+    .dealifly-timeline-table-wrapper,
+    .dealifly-plan-comparison,
+    .table-responsive {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        display: block !important;
+    }
+
+    /* 5. Mobile Form Input Comfort & Sizing */
+    .form-control,
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+        font-size: 16px !important; /* Prevents unwanted iOS auto-zoom on focus */
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 6. Touch-Friendly Interactive Elements & Tap Targets */
+    .dealifly-btn-primary,
+    .dealifly-btn-secondary,
+    .ind-btn-primary,
+    .ind-btn-ghost,
+    .btn {
+        min-height: 44px !important; /* Standard mobile touch target */
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 7. Footer Contact Word Wrap on Narrow Screens */
+    .dealifly-footer__contact-val,
+    .dealifly-footer a.dealifly-footer__contact-val {
+        word-break: break-word !important;
+        overflow-wrap: anywhere !important;
+    }
+
+    /* 8. WhatsApp Float Safety Offset */
+    .dealifly-whatsapp-float {
+        bottom: 18px !important;
+        right: 18px !important;
+        width: 52px !important;
+        height: 52px !important;
+        z-index: 9999 !important;
+    }
+}
+
+/* Extra Small Phones (<= 375px) Fine-Tuning */
+@media (max-width: 375px) {
+    .container {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+    }
+
+    .dealifly-btn-primary,
+    .dealifly-btn-secondary,
+    .ind-btn-primary,
+    .ind-btn-ghost {
+        padding: 0.75rem 1.25rem !important;
+        font-size: 0.9rem !important;
+    }
+}
