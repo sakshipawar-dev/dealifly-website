@@ -169,13 +169,14 @@
 
     // 4. Auto-highlight Active Sidebar Link
     function initSidebarActiveState() {
-        var currentPath = window.location.pathname.split('/').pop();
-        if (!currentPath) currentPath = 'index.html';
+        var currentPath = window.location.pathname.split('/').pop().replace(/\.html$/, '');
+        if (!currentPath) currentPath = 'index';
 
         var sidebarLinks = document.querySelectorAll('.dealifly-sidebar-menu a');
         sidebarLinks.forEach(function (link) {
-            var href = link.getAttribute('href');
-            if (href === currentPath) {
+            var rawHref = link.getAttribute('href') || '';
+            var href = rawHref.split('/').pop().replace(/\.html$/, '');
+            if (href && href === currentPath) {
                 link.classList.add('active');
             } else {
                 link.classList.remove('active');
