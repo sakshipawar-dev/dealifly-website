@@ -1625,22 +1625,58 @@ body.dealifly-homepage .dealifly-highlight-desc {
    HOMEPAGE REFINEMENTS: VERTICAL TIGHTENING, STICKY NAVBAR, DROPDOWNS
    ================================================================ */
 
-/* --- Change 1: Tighten Hero & Homepage Vertical Spacing --- */
+/* --- Change 1: Hero Scale, Spacing & Impact --- */
 body.dealifly-homepage .hero-8 {
     padding-bottom: 0 !important;
 }
 
 body.dealifly-homepage .hero-8__content {
-    padding-block-start: clamp(3rem, 4.5vw, 4.25rem) !important;
-    padding-block-end: 0 !important;
+    padding-block-start: clamp(5.25rem, 8.5vh, 7.5rem) !important;
+    padding-block-end: clamp(1rem, 2vh, 2rem) !important;
 }
 
-body.dealifly-homepage .hero-8 h1 {
-    line-height: 1.18 !important;
+body.dealifly-homepage .dealifly-hero-badge {
+    padding: 0.5rem 1.4rem !important;
+    margin-bottom: clamp(1.35rem, 2.5vh, 1.85rem) !important;
+    border-radius: 9999px !important;
+}
+
+body.dealifly-homepage .dealifly-hero-badge span.fs-14 {
+    font-size: clamp(0.88rem, 1.1vw, 1rem) !important;
+    letter-spacing: 0.03em !important;
+    font-weight: 600 !important;
+}
+
+body.dealifly-homepage .dealifly-hero-title {
+    font-size: clamp(2.85rem, 6vw, 5.25rem) !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.04em !important;
+    font-weight: 700 !important;
+    margin-bottom: clamp(1.35rem, 2.5vh, 1.85rem) !important;
+    max-width: 20ch !important;
+    margin-inline: auto !important;
+}
+
+body.dealifly-homepage .dealifly-hero-subheading {
+    font-size: clamp(1.25rem, 1.9vw, 1.55rem) !important;
+    line-height: 1.5 !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    margin-bottom: clamp(2rem, 3.8vh, 2.75rem) !important;
+    font-weight: 400 !important;
+    max-width: 34ch !important;
+}
+
+body.dealifly-homepage .hero-8 .dealifly-btn-primary,
+body.dealifly-homepage .hero-8 .dealifly-btn-secondary {
+    font-size: clamp(1.05rem, 1.2vw, 1.15rem) !important;
+    padding: clamp(0.95rem, 1.25vw, 1.1rem) clamp(2.2rem, 2.6vw, 2.75rem) !important;
+    border-radius: 10px !important;
+    gap: 0.65rem !important;
+    font-weight: 600 !important;
 }
 
 body.dealifly-homepage .hero-8__partners {
-    margin-top: clamp(1.25rem, 2vw, 1.75rem) !important;
+    margin-top: clamp(2rem, 4vh, 3.25rem) !important;
     padding-top: 0 !important;
     padding-bottom: clamp(1rem, 1.6vw, 1.35rem) !important;
 }
