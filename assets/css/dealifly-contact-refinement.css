@@ -5,8 +5,8 @@
    ========================================================== */
 
 body.dealifly-theme-page .banner-1__content {
-    padding-block-start: clamp(5.5rem, 8vw, 7.5rem);
-    padding-block-end: clamp(2.5rem, 4vw, 4rem);
+    padding-block-start: clamp(8rem, 12vw, 10rem);
+    padding-block-end: clamp(3rem, 5vw, 5rem);
 }
 
 body.dealifly-theme-page main > section.section-space-y.bg-body-tertiary {
@@ -343,3 +343,98 @@ body.dealifly-theme-page main > section.section-space-y.bg-body-tertiary { paddi
 
 /* Style the Contact Dealifly badge */
 body.dealifly-theme-page main .badge.bg-primary-emphasis { background: rgba(151,112,255,0.12) !important; color: #c7b5ff !important; border: 1px solid rgba(151,112,255,0.25); border-radius: 999px; padding: 0.45rem 0.8rem; }
+
+/* Match Contact hero styling with the Home page */
+body.dealifly-theme-page .dealifly-contact-hero {
+    background-color: var(--dark-saas);
+    background-image: url("../img/shapes/banner-grid-shape.png");
+    background-position: center top;
+    background-size: cover;
+    overflow: hidden;
+}
+
+body.dealifly-theme-page .dealifly-contact-hero .banner-1__content::before,
+body.dealifly-theme-page .dealifly-contact-hero .banner-1__content::after,
+body.dealifly-theme-page .dealifly-contact-hero .banner-1__froster-svg {
+    display: none;
+}
+
+body.dealifly-theme-page .dealifly-contact-hero .banner-1__content {
+    padding-block-start: clamp(7rem, 9vw, 9rem);
+    padding-block-end: clamp(3rem, 5vw, 5rem);
+}
+
+body.dealifly-theme-page .dealifly-contact-hero .banner-1__content > .row > .col-md-8.col-xl-6 {
+    margin-inline: auto;
+    text-align: center;
+}
+
+body.dealifly-theme-page .dealifly-contact-hero .breadcrumb {
+    justify-content: center;
+}
+
+body.dealifly-theme-page .dealifly-contact-hero h3 {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+body.dealifly-theme-page .dealifly-contact-hero p {
+    max-width: 700px;
+    margin-inline: auto;
+}
+
+@media (max-width: 767.98px) {
+    body.dealifly-theme-page .dealifly-contact-hero .banner-1__content {
+        padding-block-start: 6.5rem;
+        padding-block-end: 2.5rem;
+    }
+}
+
+body.dealifly-theme-page .dealifly-contact-hero {
+    background-color: #08070d;
+    background-image: radial-gradient(
+        ellipse at 50% 15%,
+        rgba(110, 55, 255, 0.4) 0%,
+        rgba(75, 35, 170, 0.18) 35%,
+        transparent 70%
+    );
+    background-position: center top;
+    background-size: 100% 100%;
+}
+
+/* Contact hero: match the Home page's purple grid and animated squares */
+body.dealifly-theme-page .dealifly-contact-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background-color: #050507 !important;
+    background-image:
+        radial-gradient(ellipse 75% 50% at 50% -5%, rgba(118, 87, 217, 0.22), transparent 60%),
+        radial-gradient(ellipse 45% 35% at 85% 15%, rgba(216, 90, 207, 0.08), transparent 55%) !important;
+}
+
+body.dealifly-theme-page .dealifly-contact-hero .hero-8__backdrop {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+body.dealifly-theme-page .dealifly-contact-hero .dealifly-hero-particles {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    pointer-events: none;
+}
+
+body.dealifly-theme-page .dealifly-contact-hero .banner-1__content {
+    position: relative;
+    z-index: 2;
+}
