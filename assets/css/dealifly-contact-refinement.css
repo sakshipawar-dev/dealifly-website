@@ -1,0 +1,345 @@
+﻿
+/* ==========================================================
+   DEALIFLY CONTACT PAGE REFINEMENT
+   Scoped to contact.html only
+   ========================================================== */
+
+body.dealifly-theme-page .banner-1__content {
+    padding-block-start: clamp(5.5rem, 8vw, 7.5rem);
+    padding-block-end: clamp(2.5rem, 4vw, 4rem);
+}
+
+body.dealifly-theme-page main > section.section-space-y.bg-body-tertiary {
+    padding-block-start: clamp(2.5rem, 4vw, 4rem);
+    padding-block-end: clamp(3rem, 5vw, 5rem);
+}
+
+body.dealifly-theme-page main > section.section-space-y.bg-body-tertiary > .container > .row {
+    align-items: start;
+    row-gap: 2rem;
+}
+
+body.dealifly-theme-page .dealifly-contact-card {
+    min-width: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(145deg, rgba(255,255,255,0.045), rgba(255,255,255,0.015));
+    border-radius: 1rem !important;
+    transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
+}
+
+body.dealifly-theme-page .dealifly-contact-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(151, 108, 255, 0.45);
+    background: rgba(151, 108, 255, 0.06);
+}
+
+body.dealifly-theme-page #contact-form {
+    row-gap: 1.25rem !important;
+}
+
+body.dealifly-theme-page #contact-form .form-control,
+body.dealifly-theme-page #contact-form .form-select {
+    width: 100%;
+    min-height: 3.1rem;
+    padding: 0.8rem 0.95rem;
+    border-radius: 0.7rem;
+    background-color: #121218;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: #f5f5fa;
+}
+
+body.dealifly-theme-page #contact-form .form-control::placeholder {
+    color: #a5a5b5;
+    opacity: 1;
+}
+
+body.dealifly-theme-page #contact-form .form-control:focus,
+body.dealifly-theme-page #contact-form .form-select:focus {
+    border-color: #9770ff;
+    box-shadow: 0 0 0 0.2rem rgba(151, 112, 255, 0.16);
+    outline: none;
+}
+
+body.dealifly-theme-page #contact-form textarea.form-control {
+    min-height: 9rem;
+    resize: vertical;
+}
+
+body.dealifly-theme-page #contact-form .form-label {
+    display: block;
+    margin-bottom: 0.55rem;
+    line-height: 1.4;
+}
+
+body.dealifly-theme-page #contact-form button[type="submit"],
+body.dealifly-theme-page #contact-form input[type="submit"] {
+    min-height: 3.15rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+}
+
+body.dealifly-theme-page #contact-form button[type="submit"] {
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+body.dealifly-theme-page #contact-form button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(120, 82, 230, 0.24);
+}
+
+body.dealifly-theme-page .dealifly-contact-status {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 767.98px) {
+    body.dealifly-theme-page .banner-1__content {
+        padding-block-start: 6.5rem;
+        padding-block-end: 2rem;
+    }
+
+    body.dealifly-theme-page .banner-1__content h3 {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+        line-height: 1.15;
+    }
+
+    body.dealifly-theme-page main > section.section-space-y.bg-body-tertiary {
+        padding-block-start: 2rem;
+        padding-block-end: 3rem;
+    }
+
+    body.dealifly-theme-page main > section.section-space-y.bg-body-tertiary > .container > .row {
+        --bs-gutter-y: 1.5rem;
+    }
+
+    body.dealifly-theme-page #contact-form .col-md-6 {
+        width: 100%;
+    }
+
+    body.dealifly-theme-page #contact-form button[type="submit"] {
+        width: 100%;
+    }
+
+    body.dealifly-theme-page .dealifly-contact-card {
+        padding: 1rem !important;
+        gap: 0.85rem !important;
+    }
+
+    body.dealifly-theme-page .dealifly-contact-card strong {
+        overflow-wrap: anywhere;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.dealifly-theme-page .dealifly-contact-card,
+    body.dealifly-theme-page #contact-form button[type="submit"] {
+        transition: none;
+    }
+
+    body.dealifly-theme-page .dealifly-contact-card:hover,
+    body.dealifly-theme-page #contact-form button[type="submit"]:hover {
+        transform: none;
+    }
+}
+
+
+
+
+
+/* Footer styling matched to the Home page */
+body.dealifly-theme-page .dealifly-footer {
+    background: #08080C !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    position: relative;
+    z-index: 1;
+}
+
+body.dealifly-theme-page .dealifly-footer-inner {
+    padding-top: clamp(3rem, 4.5vw, 4.25rem) !important;
+    padding-bottom: clamp(1.75rem, 2.8vw, 2.5rem) !important;
+}
+
+body.dealifly-theme-page .dealifly-footer__col-title {
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.01em !important;
+    color: #FFFFFF !important;
+    margin-top: 0 !important;
+    margin-bottom: 1.25rem !important;
+    line-height: 1.3 !important;
+}
+
+body.dealifly-theme-page .dealifly-footer__brand {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.65rem !important;
+    text-decoration: none !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    line-height: 1 !important;
+}
+
+body.dealifly-theme-page .dealifly-footer__brand-mark {
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+    object-fit: contain !important;
+    display: block !important;
+}
+
+body.dealifly-theme-page .dealifly-footer__brand-name {
+    font-size: 1.35rem !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.025em !important;
+    color: #FFFFFF !important;
+    line-height: 1 !important;
+}
+
+body.dealifly-theme-page .dealifly-footer__tagline {
+    font-size: 0.88rem !important;
+    line-height: 1.6 !important;
+    color: rgba(245, 245, 247, 0.65) !important;
+    margin-top: 0.85rem !important;
+    margin-bottom: 1.25rem !important;
+    max-width: 310px;
+}
+
+body.dealifly-theme-page .dealifly-footer__form {
+    max-width: 300px;
+    width: 100%;
+    margin-bottom: 0.75rem !important;
+}
+
+body.dealifly-theme-page .dealifly-footer__input {
+    background-color: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #FFFFFF !important;
+    border-radius: 8px !important;
+    padding: 0.52rem 0.85rem !important;
+    font-size: 0.86rem !important;
+    transition: border-color 180ms ease, background-color 180ms ease !important;
+}
+
+body.dealifly-theme-page .dealifly-footer__input:focus {
+    border-color: rgba(143, 122, 232, 0.5) !important;
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(118, 87, 217, 0.15) !important;
+}
+
+body.dealifly-theme-page .dealifly-footer__submit {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    color: #FFFFFF !important;
+    width: 33px !important;
+    height: 33px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: background-color 180ms ease, border-color 180ms ease !important;
+}
+
+body.dealifly-theme-page .dealifly-footer__submit:hover {
+    background-color: rgba(143, 122, 232, 0.25) !important;
+    border-color: rgba(143, 122, 232, 0.45) !important;
+    color: #FFFFFF !important;
+}
+
+body.dealifly-theme-page .dealifly-footer__whatsapp {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    padding: 0.45rem 0.9rem !important;
+    border: 1px solid rgba(37, 211, 102, 0.22) !important;
+    border-radius: 999px !important;
+    background: rgba(37, 211, 102, 0.06) !important;
+    color: #8ff0b1 !important;
+    font-size: 0.8125rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    margin-top: 0.35rem !important;
+    transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease !important;
+}
+
+body.dealifly-theme-page .dealifly-footer__whatsapp:hover {
+    background: rgba(37, 211, 102, 0.14) !important;
+    border-color: rgba(37, 211, 102, 0.4) !important;
+    color: #bbf7d0 !important;
+}
+
+body.dealifly-theme-page .dealifly-footer__link {
+    font-size: 0.86rem !important;
+    font-weight: 400 !important;
+    color: rgba(245, 245, 247, 0.65) !important;
+    text-decoration: none !important;
+    line-height: 1.5 !important;
+    transition: color 180ms ease, transform 180ms ease !important;
+    display: inline-block !important;
+}
+
+body.dealifly-theme-page .dealifly-footer__link:hover {
+    color: #FFFFFF !important;
+    transform: translateX(2px);
+}
+
+body.dealifly-theme-page .dealifly-footer__contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+body.dealifly-theme-page .dealifly-footer__contact-label {
+    font-size: 0.72rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.06em !important;
+    color: rgba(245, 245, 247, 0.45) !important;
+}
+
+body.dealifly-theme-page .dealifly-footer__contact-val {
+    font-size: 0.88rem !important;
+    font-weight: 500 !important;
+    line-height: 1.45 !important;
+}
+
+body.dealifly-theme-page .dealifly-footer__divider {
+    height: 1px !important;
+    width: 100% !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    margin-top: clamp(2.5rem, 3.8vw, 3.5rem) !important;
+    margin-bottom: 1.5rem !important;
+}
+
+body.dealifly-theme-page .dealifly-footer__bottom {
+    padding-top: 0.25rem;
+}
+
+body.dealifly-theme-page .dealifly-footer__legal-link {
+    font-size: 0.8125rem !important;
+    color: rgba(245, 245, 247, 0.55) !important;
+    text-decoration: none !important;
+    transition: color 180ms ease !important;
+}
+
+body.dealifly-theme-page .dealifly-footer__legal-link:hover {
+    color: #FFFFFF !important;
+}
+
+body.dealifly-theme-page .dealifly-footer__copyright {
+    font-size: 0.8125rem !important;
+    color: rgba(245, 245, 247, 0.45) !important;
+}
+/* Align the Send Message arrow */
+body.dealifly-theme-page #contact-form button iconify-icon {
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    line-height: 1;
+    vertical-align: baseline;
+    transform: none;
+}
+
+/* Reduce excess space below the contact section */
+body.dealifly-theme-page main > section.section-space-y.bg-body-tertiary { padding-block-end: clamp(2rem, 3vw, 3rem); }
+
+/* Style the Contact Dealifly badge */
+body.dealifly-theme-page main .badge.bg-primary-emphasis { background: rgba(151,112,255,0.12) !important; color: #c7b5ff !important; border: 1px solid rgba(151,112,255,0.25); border-radius: 999px; padding: 0.45rem 0.8rem; }
