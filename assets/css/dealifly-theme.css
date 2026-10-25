@@ -993,3 +993,77 @@ margin-inline: auto;
         font-size: 0.9rem !important;
     }
 }
+/* Blog page footer styling */
+body.dealifly-theme-page .dealifly-footer {
+    background: #08080C;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: #F5F5F7;
+}
+
+body.dealifly-theme-page .dealifly-footer a {
+    text-decoration: none !important;
+}
+
+body.dealifly-theme-page .dealifly-footer__link {
+    color: rgba(245, 245, 247, 0.65) !important;
+    font-size: 0.86rem;
+    line-height: 1.5;
+}
+
+body.dealifly-theme-page .dealifly-footer__link:hover {
+    color: #FFFFFF !important;
+}
+
+/* Blog page footer legal links and copyright */
+body.dealifly-theme-page .dealifly-footer__legal-link {
+    color: rgba(245, 245, 247, 0.55) !important;
+    text-decoration: none !important;
+}
+
+body.dealifly-theme-page .dealifly-footer__legal-link:hover {
+    color: #FFFFFF !important;
+}
+
+body.dealifly-theme-page .dealifly-footer__copyright {
+    color: rgba(245, 245, 247, 0.45) !important;
+}
+
+/* Reduce excess bottom space after the blog article */
+body.dealifly-theme-page main > section.section-space-y {
+    padding-block-end: 3rem;
+}
+
+
+/* Article footer: divider and legal-link spacing */
+body.dealifly-theme-page .dealifly-footer__divider {
+    display: block !important;
+    width: 100% !important;
+    height: 1px !important;
+    background-color: rgba(245, 245, 247, 0.12) !important;
+    border: 0 !important;
+    margin: 40px 0 24px !important;
+}
+
+body.dealifly-theme-page .dealifly-footer__legal-list {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    column-gap: 24px !important;
+    row-gap: 12px !important;
+    margin-bottom: 0 !important;
+}
+
+body.dealifly-theme-page .dealifly-footer__legal-link {
+    display: inline-block !important;
+    white-space: nowrap;
+}
+
+/* Add bottom space below article footer legal links */
+body.dealifly-theme-page .dealifly-footer__bottom {
+    padding-bottom: 24px !important;
+}
+
+/* Add space above footer content */
+body.dealifly-theme-page .dealifly-footer-inner {
+    padding-top: 48px !important;
+}
