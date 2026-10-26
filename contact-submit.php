@@ -47,7 +47,10 @@ $clean = static function ($value, int $maximumLength): string {
 $name = $clean($_POST['name'] ?? '', 100);
 $email = filter_var(trim((string) ($_POST['email'] ?? '')), FILTER_VALIDATE_EMAIL);
 $company = $clean($_POST['company'] ?? '', 150);
-$phone = $clean($_POST['phone'] ?? '', 40);
+$phone = preg_replace('/\D/', '', (string) ($_POST['phone'] ?? '')) ?? '';
+$dialCode = $clean($_POST['dial_code'] ?? '+91', 5);
+if ($phone !== '' && (strlen($phone) < 7 || strlen($phone) > 15)) { dealifly_redirect('invalid'); }
+if (!in_array($dialCode, ['+91', '+31', '+1', '+44'], true)) { $dialCode = '+91'; }
 $message = $clean($_POST['message'] ?? '', 5000);
 $serviceKey = $clean($_POST['service'] ?? '', 50);
 
@@ -92,7 +95,7 @@ $body = implode("\n", [
     'Name: ' . $name,
     'Email: ' . $email,
     'Company: ' . ($company !== '' ? $company : 'Not provided'),
-    'Phone: ' . ($phone !== '' ? $phone : 'Not provided'),
+    'Phone: ' . ($phone !== '' ? $dialCode . ' ' . $phone : 'Not provided'),
     'Service: ' . $services[$serviceKey],
     '',
     'Message:',

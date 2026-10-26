@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
 
 <head>
@@ -296,7 +296,15 @@
                                         </div>
                                         <div class="col-md-6">
                                             <label for="phone" class="form-label fs-14 fw-medium text-heading"> Phone number </label>
-                                            <input type="tel" name="phone" id="phone" class="form-control" placeholder="Phone number" maxlength="40" autocomplete="tel">
+                                            <div class="d-flex gap-2">
+    <select name="dial_code" id="dial_code" class="form-select" style="max-width: 130px" aria-label="Country dial code">
+        <option value="+91">India (+91)</option>
+        <option value="+31">Netherlands (+31)</option>
+        <option value="+1">USA (+1)</option>
+        <option value="+44">UK (+44)</option>
+    </select>
+    <input type="tel" name="phone" id="phone" class="form-control" placeholder="Phone number" maxlength="15" pattern="[0-9]{7,15}" inputmode="numeric" autocomplete="tel-national" title="Enter 7 to 15 digits">
+</div>
                                         </div>
                                         <div class="col-12">
                                             <label for="service" class="form-label fs-14 fw-medium text-heading"> What do you need help with? </label>
@@ -346,7 +354,7 @@
                                 </p>
                                 <form action="contact.html" method="get" class="dealifly-footer__form d-flex align-items-center gap-2">
                                     <label for="footer-email" class="visually-hidden"> Enter your email </label>
-                                    <input type="email" name="email" id="footer-email"
+                                    <input type="email" name="email" id="footer-email" required
                                         class="form-control form-control-sm bg-dark-subtle border-dark text-light dealifly-footer__input"
                                         placeholder="Enter your email" autocomplete="email">
                                     <button type="submit"
@@ -716,6 +724,31 @@
         }());
     </script>
 
+<script id="dealifly-email-validation-feedback">
+(function () {
+    var form = document.getElementById('contact-form');
+    var email = document.getElementById('email2');
+    if (!form || !email) return;
+
+    var error = document.createElement('div');
+    error.id = 'email-validation-error';
+    error.style.cssText = 'display:none;color:#ff7777;font-size:14px;margin-top:6px;';
+    error.setAttribute('role', 'alert');
+    email.insertAdjacentElement('afterend', error);
+
+    email.addEventListener('invalid', function () {
+        error.textContent = email.validity.valueMissing
+            ? 'Please enter your email address.'
+            : 'Please enter a valid email address.';
+        error.style.display = 'block';
+    });
+
+    email.addEventListener('input', function () {
+        error.style.display = 'none';
+        error.textContent = '';
+    });
+})();
+</script>
 </body>
 
 </html>

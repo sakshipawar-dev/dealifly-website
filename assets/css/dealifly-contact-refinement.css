@@ -1,4 +1,4 @@
-﻿
+
 /* ==========================================================
    DEALIFLY CONTACT PAGE REFINEMENT
    Scoped to contact.html only
@@ -329,12 +329,19 @@ body.dealifly-theme-page .dealifly-footer__copyright {
     color: rgba(245, 245, 247, 0.45) !important;
 }
 /* Align the Send Message arrow */
+body.dealifly-theme-page #contact-form button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
 body.dealifly-theme-page #contact-form button iconify-icon {
     display: inline-block;
-    position: relative;
-    top: 4px;
+    position: static;
+    top: auto;
     line-height: 1;
-    vertical-align: baseline;
+    vertical-align: middle;
     transform: none;
 }
 
